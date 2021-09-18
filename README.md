@@ -1,8 +1,8 @@
 ## Time
 
 Barbara Bidoia Bidetti (Dev Team)
-([Linkedin],
-[Github])
+([Linkedin](https://www.linkedin.com/in/barbara-bidetti-bb910a1b3/),
+[Github](https://github.com/Barbara-BB))
 
 Daniel Vargas Ribeiro (Scrum Master)
 ([Linkedin](https://www.linkedin.com/in/daniel-vargas-8b806a184/),
