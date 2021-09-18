@@ -29,8 +29,6 @@ Feito por
 Feito por 
 
 # Wireframes(Protótipos)
-## Index
-![index](https://github.com/kevingabrielmelo/nLearning-Team2/blob/develop/readme-assets/sprint_1/index.gif)
 
 Feito por  
 
@@ -41,4 +39,4 @@ Feito por
 
 Feito por Edryan Matheus
 
-
+##Readme Feito por Daniel Vargas
