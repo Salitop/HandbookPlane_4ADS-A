@@ -41,6 +41,8 @@ O projeto HandbookPlane consiste em uma API desenvolvida usando Java 11 será um
 
 ![card_3](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_3.png) ![card_4](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_4.png)
 
+Feito por Kevin Melo
+
 # Lista de Requisitos
 ![requisitos1](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Requisitos/Requisitos_funcionais.png)
 
