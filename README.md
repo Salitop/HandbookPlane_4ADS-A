@@ -33,7 +33,7 @@ está a disponibilização do planejamento das sprints do projeto.
 
 ## Projeto
 
-O projeto HandbookPlane consiste em uma API desenvolvida usando Java 11 será um website desenvolvido utilizando HTML, CSS e JavaScript com rede local. Com essas ferramentas desenvolveremos um sistema, para realizar a documentação de aéronaves, de forma fácil e organizada para agilizar o serviço de nossos clientes.
+O projeto HandbookPlane consiste em uma API desenvolvida usando Java 11 será um website desenvolvido utilizando HTML, CSS e JavaScript com rede local. Com essas ferramentas desenvolveremos um sistema, para realizar a documentação de aéronaves de forma mais fácil e organizada com intuito de agilizar o serviço de nossos clientes.
 
 ## Cards das Sprints
   
