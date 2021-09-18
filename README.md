@@ -47,11 +47,11 @@ Feito por Kevin Melo
 # Lista de Requisitos
 ![requisitos1](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Requisitos/Requisitos_funcionais.png)
 
-Feito por Daniel Vargas
+Feito por Daniel Vargas e Kevin Melo
 
 ![requisitos2](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Requisitos/Requisitos_n%C3%A3o_funcionais.png)
 
-Feito por Daniel Vargas 
+Feito por Daniel Vargas e Kevin Melo
 
 ## Entregas
 
@@ -59,3 +59,5 @@ Feito por Daniel Vargas
 | Data | Links |
 | ------ | ------ |
 |    19/09/2021    |[Sprint 1](https://github.com/kevingabrielmelo/nLearning-Team2/tree/sprint_1)|
+
+Documentação Readme Feito por Daniel Vargas
