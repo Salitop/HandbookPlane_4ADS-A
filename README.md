@@ -26,7 +26,7 @@ No <a href='https://trello.com/b/EVkEayjU/api-3-semestre'> Trello </a>
 está a disponibilização do planejamento das sprints do projeto.
 
 ## Índice
-* [O que é o NLearning](#projeto)
+* [O que é o HandBookPlane](#projeto)
 * [Card das Sprints](#cards-das-sprints)
 * [Product Backlog](#lista-de-requisitos)
 * [Cronograma de Entregas](#entregas)
