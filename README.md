@@ -8,7 +8,8 @@ No <a href='https://trello.com/b/n0Ky9r1p/api-4sem'> Trello </a>
 está a disponibilização do planejamento das sprints do projeto.
 
 # User Stories
-
+![Users Stories](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/User%20Stories/Users%20Stories.png)
+Feito por Barbara Bidetti
 # Requisitos Funcionais e Não Funcionais
 ![requisitos1](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Requisitos/Requisitos_funcionais.png)
 
