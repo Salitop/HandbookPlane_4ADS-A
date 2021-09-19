@@ -22,7 +22,7 @@ Luiz Miguel Macedo Andre (Product Owner)
 
 
 ## Planejamento das Sprints
-No <a href='https://trello.com/b/EVkEayjU/api-3-semestre'> Trello </a>
+No <a href='https://trello.com/b/n0Ky9r1p/api-4sem'> Trello </a>
 está a disponibilização do planejamento das sprints do projeto.
 
 ## Índice
@@ -58,6 +58,6 @@ Feito por Daniel Vargas e Kevin Melo
 
 | Data | Links |
 | ------ | ------ |
-|    19/09/2021    |[Sprint 1](hhttps://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-1)|
+|    19/09/2021    |[Sprint 1](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-1)|
 
 Documentação Readme Feito por Daniel Vargas
