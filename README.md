@@ -30,14 +30,22 @@ Feito por Edryan Matheus
 ## Login
 ![WireframeLogin](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/login.png)
 
+Feito por Luiz Miguel
+
 ## Menu
 ![WireframeMenu](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/menu.png)
+
+Feito por Luiz Miguel
 
 ## Usuários
 ![WireframeUsuários](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/usuarios.png)
 
+Feito por Luiz Miguel
+
 ## Traços
 ![WireframeTraços](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/tracos.png)
+
+Feito por Luiz Miguel
 
 ## Blocos
 ![WireframeBlocos](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/blocos.png)
