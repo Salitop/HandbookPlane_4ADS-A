@@ -19,20 +19,30 @@ Feito por Daniel Vargas E Kevin Melo
 
 Feito por Daniel Vargas E Kevin Melo
 
-# Modelagem do banco
-
-
-Feito por 
-
 # Log e relacionamentos do banco
 
+![MER](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Banco/MER.png)
 
-Feito por 
+Feito por Edryan Matheus
 
 # Wireframes(Protótipos)
 
-Feito por  
+## Login
+![WireframeLogin](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/login.png)
 
+## Menu
+![WireframeMenu](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/menu.png)
+
+## Usuários
+![WireframeUsuários](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/usuario.png)
+
+## Traços
+![WireframeTraços](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/traco.png)
+
+## Blocos
+![WireframeBlocos](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Wireframe/bloco.png)
+
+Feito por Luiz Miguel
 
 # Burndown
 
