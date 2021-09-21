@@ -39,7 +39,9 @@ public class AdministradorController {
      */
     @PostMapping(value = "/cadastrarAdministrador")
     public ModelAndView cadastraAdministrador(Administrador administrador) {
-        administradorRepository.save(administrador);
-        return new ModelAndView("/administrador/cadastrarAdministrador");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("admin", administradorRepository.save(administrador).getIdAdmin());
+        modelAndView.setViewName("/administrador/cadastrarAdministrador");
+        return modelAndView;
     }
 }

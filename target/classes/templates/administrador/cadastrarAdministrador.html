@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Cadastrar Administrador</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="body">
 <div class="main_cadastro">
@@ -10,6 +11,10 @@
     <form method='post'>
         <div class="row about-container">
             <div class="col-lg-6">
+
+                <input type="hidden" th:value="${admin}"
+                       th:attr="name='admin'" id="admin"/>
+
                 <h3 class="titulos_forms ">Nome:</h3>
                 <input class="input_forms" type='text' placeholder="Nome"
                        name="nome" required/>
@@ -44,5 +49,12 @@
     </form>
 </div>
 </div>
+<script>
+const inputID = document.getElementById('admin');
+const id = inputID.value;
+    if (id > 0 && id != null) {
+        Swal.fire('Sucesso!', 'Administrador cadastrado!', 'success')
+    }
+</script>
 </body>
 </html>
