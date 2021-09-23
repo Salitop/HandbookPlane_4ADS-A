@@ -46,7 +46,7 @@ public class Administrador {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
-        this.matricula = shortUUID();
+        this.matricula = gerarUUIDpequeno();
         this.telefone = telefone;
         this.email = email;
         this.login = login;
@@ -57,7 +57,7 @@ public class Administrador {
      * Método para gerar matricula do usuário
      * @return String
      */
-    public static String shortUUID() {
+    public static String gerarUUIDpequeno() {
         UUID uuid = UUID.randomUUID();
         long l = ByteBuffer.wrap(uuid.toString().getBytes()).getLong();
         return Long.toString(l, Character.MAX_RADIX);
