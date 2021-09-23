@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.nio.ByteBuffer;
 import java.util.UUID;
 
 /**
@@ -45,10 +46,20 @@ public class Administrador {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
-        this.matricula = UUID.randomUUID().toString();
+        this.matricula = shortUUID();
         this.telefone = telefone;
         this.email = email;
         this.login = login;
         this.senha = senha;
+    }
+
+    /**
+     * Método para gerar matricula do usuário
+     * @return String
+     */
+    public static String shortUUID() {
+        UUID uuid = UUID.randomUUID();
+        long l = ByteBuffer.wrap(uuid.toString().getBytes()).getLong();
+        return Long.toString(l, Character.MAX_RADIX);
     }
 }
