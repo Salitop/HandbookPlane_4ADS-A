@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/login/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<header>
+	<img class="imagem-logo" src="/imagens/logo.svg">
+	<h1 >HandBookPlane</h1>
+</header>
+<body id= "body"class="body">
+<div class="div-login">
+	<h1 id="login-titulo">Login</h1>
+	<h3 id="login-entrada">Login:</h3>
+	<input id="input-login" type='text' placeholder="Login"name="login" required/>
+	<h3>Senha:</h3>
+	<input id="input-login"type='password' placeholder="Senha"name="senha" required/>
+	<div class="login-esqueceu">
+	<a class="esqueceu-senha "href="/esqueceuSenha">Esqueceu sua senha?</a>
+	<input class="btn-salvar"type="submit" value="Login">
+	</div>
+</div>
+</body>
+</html>
