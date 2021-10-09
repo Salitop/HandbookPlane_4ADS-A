@@ -47,7 +47,9 @@ public class Administrador {
     /**
      * Gerando construtor do administrador default
      */
-    public Administrador() {}
+    public Administrador() {
+        this.matricula = gerarUUIDpequeno();
+    }
 
     /**
      * Método para gerar matricula do usuário
