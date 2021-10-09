@@ -7,12 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="HandbookPlane_4ADS-A" />
         <module name="handkbook-plane" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HandbookPlane_4ADS-A" options="-parameters" />
       <module name="handkbook-plane" options="-parameters" />
     </option>
   </component>

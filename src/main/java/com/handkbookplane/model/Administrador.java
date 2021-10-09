@@ -28,30 +28,26 @@ public class Administrador {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idAdmin;
     private String nome;
-    private String dataNascimento;
-    private String endereco;
     @GeneratedValue
     private String matricula;
-    private String telefone;
-    private String email;
     private String login;
     private String senha;
 
     /**
      * Gerando construtor do administrador
      */
-    public Administrador(Integer idAdmin, String nome, String dataNascimento, String endereco, UUID matricula,
-                         String telefone, String email, String login, String senha) {
+    public Administrador(Integer idAdmin, String nome, UUID matricula, String login, String senha) {
         this.idAdmin = idAdmin;
         this.nome = nome;
-        this.dataNascimento = dataNascimento;
-        this.endereco = endereco;
         this.matricula = gerarUUIDpequeno();
-        this.telefone = telefone;
-        this.email = email;
         this.login = login;
         this.senha = senha;
     }
+
+    /**
+     * Gerando construtor do administrador default
+     */
+    public Administrador() {}
 
     /**
      * Método para gerar matricula do usuário
