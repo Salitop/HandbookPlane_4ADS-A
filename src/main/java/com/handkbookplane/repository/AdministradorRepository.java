@@ -17,4 +17,6 @@ public interface AdministradorRepository extends CrudRepository<Administrador, S
 {
     //Procura Admin por Login
     Administrador findByLogin(String login);
-    ;}
+
+    Administrador findByIdAdmin(Integer idAdmin);
+}

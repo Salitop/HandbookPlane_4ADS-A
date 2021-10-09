@@ -48,7 +48,7 @@ public class LoginController {
             Usuario usuario = new Usuario();
 
             usuario.IdUsu = (adm.getIdAdmin());
-            return "redirect:menuAdministrador";
+            return "redirect:menuInicial";
         }
         return "redirect:login";
     }
