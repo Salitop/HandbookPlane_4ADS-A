@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Visualizar Perfil</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/menu/visualizarPerfil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<header class="header">
+	<div >
+		<img class="imagem-logo" src="/imagens/logo.svg">
+		<p id="p" class="bemvindo">Handbook Plane</p>
+		<img class="imagem-sair" src="/imagens/sair.svg">
+		<li><a class="sair"href="/login" title="">Sair</a></li>
+	</div>
+</header>
+
+<body id= "body"class="body">
+<div class="main_cadastro">
+    <h1 class="menu-inicial">Visualizar Perfil</h1>
+    <form method='post'>
+        <div class="row about-container">
+            <div class="col-lg-6">
+				<div class="div-container">
+	                <input type="hidden" th:value="${administrador}"
+	                       th:attr="name='administrador'" id="administrador"/>
+	                       
+	                 <img class="img-1" src="/imagens/perfil.svg">
+	                 <a href="/" class="tit-1">Alterar senha:</a>
+	                 
+	                 <a class="tit-2">Nome Completo: <span th:text="${administrador.nome}"></span></a>
+	                 
+	                 <a class="tit-3">Nome de Usuário: <span th:text="${administrador.login}"></span></a>
+	                 
+	                 <a class="tit-4">Número de Matrícula: <span th:text="${administrador.matricula}"></span></a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -23,6 +23,10 @@ import javax.sql.DataSource;
 @Configuration
 public class DataConfiguration {
 
+    /**
+     * Metódo responsável por configurar conexão com o banco MySQL
+     * @return DataSource
+     */
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -32,6 +36,11 @@ public class DataConfiguration {
         dataSource.setPassword("password");
         return dataSource;
     }
+
+    /**
+     * Metódo responsável por configurar conexão com o banco MySQL
+     * @return adapter
+     */
     @Bean
     public JpaVendorAdapter jpaVendorAdapter(){
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
