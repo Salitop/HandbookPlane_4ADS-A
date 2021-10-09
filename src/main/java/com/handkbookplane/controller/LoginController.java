@@ -40,13 +40,14 @@ public class LoginController {
     @PostMapping(value = "/login")
     public String logar(String login, String senha) {
 
-        Administrador administrador = administradorRepository.findByLogin(login);
+        Administrador adm;
+        adm = administradorRepository.findByLogin(login);
 
-        if(administrador != null && administrador.getLogin().equals(login) && administrador.getSenha().equals(senha)) {
+        if(adm != null && adm.getLogin().equals(login) && adm.getSenha().equals(senha)) {
 
             Usuario usuario = new Usuario();
 
-            usuario.setIdUsu(administrador.getIdAdmin());
+            usuario.IdUsu = (adm.getIdAdmin());
             return "redirect:menuAdministrador";
         }
         return "redirect:login";

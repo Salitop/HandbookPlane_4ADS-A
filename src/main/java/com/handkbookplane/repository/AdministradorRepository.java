@@ -12,4 +12,9 @@ import org.springframework.stereotype.Repository;
  * @Since: 20/09/2021
  */
 @Repository
-public interface AdministradorRepository extends CrudRepository<Administrador, String> {}
+public interface AdministradorRepository extends CrudRepository<Administrador, String>
+
+{
+    //Procura Admin por Login
+    Administrador findByLogin(String login);
+    ;}
