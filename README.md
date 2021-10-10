@@ -38,25 +38,25 @@ Feito por Kevin Melo
 
 # Tela de Cadastro e Menu de Usuário
 
-![tela-cadastro](https://giphy.com/gifs/Zu91KIWkQ6N9jR79Y5)
+![tela-cadastro](https://media2.giphy.com/media/Zu91KIWkQ6N9jR79Y5/giphy.gif?cid=790b7611a67ce432ca26b0d97dec88248dfed78d7d78f7bf&rid=giphy.gif&ct=g)
 
 Front-end feito por Daniel Vargas e back-end por Kevin Gabriel.
 
 # Tela de Login e Menu Inicial
 
-![tela-login](https://giphy.com/gifs/MLIUXo1QmFivarRFE1)
+![tela-login](https://media3.giphy.com/media/XYN0WW65QHVo2vufiE/giphy.gif?cid=790b7611b89621e871c4dab1f14a5c14ce5c4d80fe688a2d&rid=giphy.gif&ct=g)
 
 Front-end feito por Daniel Vargas e back-end por Edryan Matheus e Luiz Miguel.
 
 # Logando com usuário criado
 
-![tela-login2](https://giphy.com/gifs/XYN0WW65QHVo2vufiE)
+![tela-login2](https://media2.giphy.com/media/MLIUXo1QmFivarRFE1/giphy.gif?cid=790b761152d03b7881197c0f843701154b922f3e839ef845&rid=giphy.gif&ct=g)
 
 Front-end feito por Daniel Vargas e back-end por Edryan Matheus e Luiz Miguel.
 
 # Tela de Perfil do Usuário
 
-![tela-perfil](https://giphy.com/gifs/EuKOPLwu9KQCMqg7ny)
+![tela-perfil](https://media4.giphy.com/media/EuKOPLwu9KQCMqg7ny/giphy.gif?cid=790b7611083cca12117612e08db080e8853b3e4cd03b431a&rid=giphy.gif&ct=g)
 
 Front-end feito por Daniel Vargas e back-end por Kevin Gabriel.
 
