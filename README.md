@@ -42,7 +42,7 @@ Front-end feito por Daniel Vargas e back-end por Kevin Gabriel.
 # Menu de Traços
 
 # Burndown
-
+![burndown-sprint2](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-2/Doc/Burndown/Burndown_sprint2.jpeg)
 
 
 Documentação Readme Feito por Daniel Vargas
