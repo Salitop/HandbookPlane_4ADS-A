@@ -36,6 +36,12 @@ O projeto HandbookPlane consiste em uma API desenvolvida usando Java 11 será um
 
 Feito por Kevin Melo
 
+## Prototipação das Telas
+No <a href='https://www.figma.com/file/KNN1fCOdvzGhXHruUsJOYl/HandBookPlane?node-id=0%3A1'> Figma </a>
+está a disponibilização da prototipação das telas implementadas.
+
+Feito por Daniel Vargas E Luiz Miguel
+
 # Tela de Cadastro e Menu de Usuário
 
 ![tela-cadastro](https://media2.giphy.com/media/Zu91KIWkQ6N9jR79Y5/giphy.gif?cid=790b7611a67ce432ca26b0d97dec88248dfed78d7d78f7bf&rid=giphy.gif&ct=g)
@@ -63,6 +69,8 @@ Front-end feito por Daniel Vargas e back-end por Kevin Gabriel.
 # Menu de Blocos
 
 # Menu de Traços
+
+# Burndown
 
 ## Entregas
 
