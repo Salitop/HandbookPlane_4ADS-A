@@ -1,9 +1,5 @@
 ## Time
 
-Barbara Bidoia Bidetti (Dev Team)
-([Linkedin](https://www.linkedin.com/in/barbara-bidetti-bb910a1b3/),
-[Github](https://github.com/Barbara-BB))
-
 Daniel Vargas Ribeiro (Scrum Master)
 ([Linkedin](https://www.linkedin.com/in/daniel-vargas-8b806a184/),
 [Github](https://github.com/DanVargaa))
@@ -35,23 +31,38 @@ está a disponibilização do planejamento das sprints do projeto.
 
 O projeto HandbookPlane consiste em uma API desenvolvida usando Java 11 será um website desenvolvido utilizando HTML, CSS e JavaScript com rede local. Com essas ferramentas desenvolveremos um sistema, para realizar a documentação de aéronaves de forma mais fácil e organizada com intuito de agilizar o serviço de nossos clientes.
 
-## Cards das Sprints
-  
-![card1](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_1.png) ![card_2](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_2.png)
-
-![card_3](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_3.png) ![card_4](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_4.png)
-
+## Card das Sprint
+  ![card_2](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_2.png)
 
 Feito por Kevin Melo
 
-# Lista de Requisitos
-![requisitos1](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Requisitos/Requisitos_funcionais.png)
+# Tela de Cadastro e Menu de Usuário
 
-Feito por Daniel Vargas e Kevin Melo
+![tela-cadastro](https://giphy.com/gifs/Zu91KIWkQ6N9jR79Y5)
 
-![requisitos2](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Requisitos/Requisitos_n%C3%A3o_funcionais.png)
+Front-end feito por Daniel Vargas e back-end por Kevin Gabriel.
 
-Feito por Daniel Vargas e Kevin Melo
+# Tela de Login e Menu Inicial
+
+![tela-login](https://giphy.com/gifs/MLIUXo1QmFivarRFE1)
+
+Front-end feito por Daniel Vargas e back-end por Edryan Matheus e Luiz Miguel.
+
+# Logando com usuário criado
+
+![tela-login2](https://giphy.com/gifs/XYN0WW65QHVo2vufiE)
+
+Front-end feito por Daniel Vargas e back-end por Edryan Matheus e Luiz Miguel.
+
+# Tela de Perfil do Usuário
+
+![tela-perfil](https://giphy.com/gifs/EuKOPLwu9KQCMqg7ny)
+
+Front-end feito por Daniel Vargas e back-end por Kevin Gabriel.
+
+# Menu de Blocos
+
+# Menu de Traços
 
 ## Entregas
 
@@ -59,5 +70,6 @@ Feito por Daniel Vargas e Kevin Melo
 | Data | Links |
 | ------ | ------ |
 |    19/09/2021    |[Sprint 1](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-1)|
+|    10/10/2021    |[Sprint 2](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-2)|
 
 Documentação Readme Feito por Daniel Vargas
