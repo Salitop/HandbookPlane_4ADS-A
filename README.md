@@ -72,12 +72,6 @@ Front-end feito por Daniel Vargas e back-end por Kevin Gabriel.
 
 # Burndown
 
-## Entregas
 
-
-| Data | Links |
-| ------ | ------ |
-|    19/09/2021    |[Sprint 1](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-1)|
-|    10/10/2021    |[Sprint 2](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-2)|
 
 Documentação Readme Feito por Daniel Vargas
