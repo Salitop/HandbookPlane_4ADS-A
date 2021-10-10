@@ -1,9 +1,5 @@
 ## Time
 
-Barbara Bidoia Bidetti (Dev Team)
-([Linkedin](https://www.linkedin.com/in/barbara-bidetti-bb910a1b3/),
-[Github](https://github.com/Barbara-BB))
-
 Daniel Vargas Ribeiro (Scrum Master)
 ([Linkedin](https://www.linkedin.com/in/daniel-vargas-8b806a184/),
 [Github](https://github.com/DanVargaa))
@@ -53,11 +49,13 @@ Feito por Daniel Vargas e Kevin Melo
 
 Feito por Daniel Vargas e Kevin Melo
 
+
 ## Entregas
 
 
 | Data | Links |
 | ------ | ------ |
 |    19/09/2021    |[Sprint 1](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-1)|
+|    10/10/2021    |[Sprint 2](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-2)|
 
 Documentação Readme Feito por Daniel Vargas
