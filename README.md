@@ -39,7 +39,15 @@ Front-end feito por Daniel Vargas e back-end por Kevin Gabriel.
 
 # Menu de Blocos
 
+![tela-bloco](https://media.giphy.com/media/ncvW7Xiz8C6JhXCpJn/giphy.gif)
+
+Front-end criado por Luiz Miguel
+
 # Menu de Traços
+
+![tela-traço](https://media.giphy.com/media/l27RMaihsd3ne3N26m/giphy.gif)
+
+Front-end criado por Luiz Miguel
 
 # Burndown
 ![burndown-sprint2](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-2/Doc/Burndown/Burndown_sprint2.jpeg)
