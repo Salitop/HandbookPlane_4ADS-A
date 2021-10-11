@@ -1,0 +1,140 @@
+.header{
+	height:70px;
+	background:#0C3756;
+
+}
+.imagem-logo{
+	margin-top:10px;
+	margin-left: 70px;
+	height:5%;
+	width:5%;
+	float:left;
+}
+.bemvindo{
+	font-size: 20px;
+	padding-top: 1.5%;
+	margin-left: 30% ;
+	color:white;
+	float:left;
+}
+
+.sair{
+	font-size: 20px;
+	padding-top: 1.5%;
+	margin-left: 4% ;
+	color:white;
+	float:left;
+}
+li {
+  list-style-type: none;
+}
+
+a{
+	font-family: 'Roboto', sans-serif;
+	font-weight:400;
+	text-decoration: none;
+}
+.menu-inicial{
+	margin-left: 10% ;
+	font-size: 45px;
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
+}
+
+.div-container{
+	padding-top: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	background-color:#f0f0f0;
+	margin-left:15%;
+	max-width: 960px;
+	height:450px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+.imagem-sair{
+	margin-top:20px;
+	margin-left: 26%;
+	height:3%;
+	width:3%;
+	float:left;
+
+}
+#body{
+	margin:0;
+}
+#p{
+	margin-top:0;
+	font-family: 'Roboto' sans-serif;
+}
+
+.img-1{
+	margin-left: 10%;
+	float:left;
+}
+
+.tit-1{
+	margin-left:7%;
+	margin-top: 3.5%;
+    float: left;
+    display: inline;
+    font-style: 'Roboto',sans-serif;
+    font-size: 24px;
+    color: black;
+    font-weight: 400;
+}
+
+.img-2{
+	margin-top: 25%;
+    margin-left: -27%;
+    float: left;
+}
+
+.tit-2{
+	padding-bottom: 5%;
+    margin-top: 29%;
+    margin-left: -10%;
+    float: left;
+    display: inline;
+    font-style: 'Roboto',sans-serif;
+    font-size: 24px;
+    color: black;
+    weight: 400;
+}
+
+.img-3{
+	height: 90px;
+    margin-top: 26%;
+    margin-left: 21.5%;
+    float: left;
+}
+
+.tit-3{
+    padding-bottom: 17%;
+    margin-top: 4%;
+    margin-left: 5%;
+    float: left;
+    display: inline;
+    font-style: 'Roboto',sans-serif;
+    font-size: 24px;
+    color: black;
+    weight: 400;
+}
+
+.img-4{
+    margin-left: -22%;
+    float: left;
+}
+
+.tit-4{
+    padding-bottom: 5%;
+    margin-top: 30%;
+    margin-left: -7.5%;
+    float: left;
+    display: inline;
+    font-style: 'Roboto',sans-serif;
+    font-size: 24px;
+    color: black;
+    weight: 400;
+}

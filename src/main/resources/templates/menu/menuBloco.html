@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Menu Usuário</title>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="stylesheet" href="/menu/menuBloco.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<header class="header">
+	<div >
+		<img class="imagem-logo" src="/imagens/logo.svg">
+		<p id="p" class="bemvindo">Bem vindo: <span th:text="${administrador.nome}"></span> </p>
+		<img class="imagem-sair" src="/imagens/sair.svg">
+		<li><a class="sair"href="/login" title="">Sair</a></li>
+	</div>
+</header>
+
+<body id= "body"class="body">
+<div class="main_cadastro">
+	<h1 class="menu-inicial">Menu Bloco</h1>
+	<form method='post'>
+		<div class="row about-container">
+			<div class="col-lg-6">
+				<div class="div-container">
+					<input type="hidden" th:value="${admin}"
+						   th:attr="name='admin'" id="admin"/>
+
+					<img class="img-1" src="/imagens/gerar.svg">
+					<a href="/" class="tit-1">Gerar Bloco</a>
+
+					<img class="img-2" src="/imagens/codelist.svg">
+					<a href="/" class="tit-2" >Emitir Revisão</a>
+
+					<img class="img-3" src="/imagens/historico-relatorio.svg">
+					<a href="/" class="tit-3" >Lista de Usuários</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+</body>
+</html>
