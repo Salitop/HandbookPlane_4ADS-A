@@ -52,5 +52,6 @@ Front-end criado por Luiz Miguel
 # Burndown
 ![burndown-sprint2](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-2/Doc/Burndown/Burndown_sprint2.jpeg)
 
+Feito por Edryan Matheus
 
 Documentação Readme Feito por Daniel Vargas
