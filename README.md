@@ -54,4 +54,4 @@ Front-end criado por Luiz Miguel
 
 Feito por Edryan Matheus
 
-Documentação Readme Feito por Daniel Vargas
+Documentação Readme Feito por Daniel Vargas e Luiz Miguel
