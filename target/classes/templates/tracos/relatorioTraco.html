@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Relatório Traço</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/tracos/relatorioTraco.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<header class="header">
+    <div >
+        <img class="imagem-logo" src="/imagens/logo.svg">
+        <p id="p" class="bemvindo">Bem vindo:(Nome de usuario)</p>
+        <img class="imagem-sair" src="/imagens/sair.svg">
+        <li><a class="sair"href="/login" title="">Sair</a></li>
+    </div>
+</header>
+
+<body id= "body"class="body">
+<div class="main_cadastro">
+    <h1 class="titulo-cadastro">Relatório Traço</h1>
+    <form method='post'>
+        <div class="row about-container">
+            <div class="col-lg-6">
+                <div class="div-container">
+                    <input type="hidden" th:value="${admin}"
+                           th:attr="name='admin'" id="admin"/>
+                    <div class="div-1">
+                        <h3 class="tag-0">Relatório do Traço:</h3>
+                        <h2>ABC-1234-02-04c06</h2>
+                    </div>
+
+                    <div class="div-1">
+                        <h3 class="tag-1">Descrição do traço:</h3>
+                        <textarea class="text-area-1"rows="4" cols="50" placeholder="Ex:Traço referente painel do avião"></textarea>
+                    </div>
+                    <div class="div-1">
+                        <h3 class="tag-2">N° de páginas:</h3>
+                        <textarea class="text-area-2"rows="1" cols="50" placeholder="Ex: 12 páginas"></textarea>
+
+                    </div>
+                    <input class="btn-salvar"type="submit" value="Salvar">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+<script>
+const inputID = document.getElementById('admin');
+const id = inputID.value;
+    if (id > 0 && id != null) {
+        Swal.fire('Sucesso!', 'Administrador cadastrado!', 'success')
+    }
+</script>
+</body>
+</html>
