@@ -14,7 +14,7 @@
     <div >
         <img class="imagem-logo" src="/imagens/logo.svg">
         <p id="p" class="bemvindo">Bem vindo: <span th:text="${administrador.nome}"></span> </p>
-        <img class="imagem-sair" src="/imagens/sair.svg">
+        <a href="menuInicial"><img class="imagem-sair" src="/imagens/sair.svg"></a>
         <li><a class="sair"href="/login" title="">Sair</a></li>
     </div>
 </header>
@@ -27,7 +27,7 @@
             <div class="col-lg-6">
                 <div class="div-container">
                     <img class="img-1" src="/imagens/tracos.svg">
-                    <a href="/menuUsuario" class="tit-1">Vizualizar Traços</a>
+                    <a href="/listarTraco" class="tit-1">Vizualizar Traços</a>
 
                     <img class="img-2" src="/imagens/gerar.svg">
                     <a href="/criarTraco" class="tit-2">Gerar Traços</a>
@@ -36,7 +36,7 @@
                     <a href="/emitirRelatorio" class="tit-3">Emitir Relatório</a>
 
                     <img class="img-4" src="/imagens/historico-relatorio.svg">
-                    <a href="/" class="tit-4">Histórico</a>
+                    <a href="/historicoDeTracos" class="tit-4">Histórico</a>
 
 
                 </div>
