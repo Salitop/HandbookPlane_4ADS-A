@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Listar Traço</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/tracos/listarTraco.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<header class="header">
+    <div >
+        <img class="imagem-logo" src="/imagens/logo.svg">
+        <p id="p" class="bemvindo">Bem vindo:(Nome de usuario)</p>
+        <a href="menuTraco"><img class="imagem-sair" src="/imagens/sair.svg"></a>
+        <li><a class="sair"href="/login" title="">Sair</a></li>
+    </div>
+</header>
+
+<body id= "body"class="body">
+<div class="main_cadastro">
+    <h1 class="titulo-cadastro">Listar Traço</h1>
+    <form method='post'>
+        <div class="row about-container">
+            <div class="col-lg-6">
+                <div class="div-container">
+                    <input type="hidden" th:value="${admin}"
+                           th:attr="name='admin'" id="admin"/>
+                    <div class="div-1">
+                        <h3 class="tag-0">Pesquisar:</h3>
+                        <input class="input-forms-1" type='text' placeholder="Ex: Bloco, Code"
+                               name="nome" id="nome" required/>
+                    </div>
+                    <div class="div-2">
+                        <table>
+                            <tr >
+                                <th class="color-th">Selecionar</th>
+                                <th class="color-th">Traço</th>
+                            </tr>
+                            <tr >
+                                <td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
+                                <td class="td-color-1">linha</td>
+                            </tr>
+                            <tr >
+                                <td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
+                                <td class="td-color-1">linha</td>
+                            </tr>
+                            <tr >
+                                <td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
+                                <td class="td-color-1">linha</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <a href="listaDeTracos"><input class="btn-salvar"type="button" value="Visualizar/Comparar"></a>
+                    <p class="p-atenttion">Atenção: Escolher apenas 2 Traços parar comparar ou apenas 1 para Visualizar</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+<script>
+const inputID = document.getElementById('admin');
+const id = inputID.value;
+    if (id > 0 && id != null) {
+        Swal.fire('Sucesso!', 'Administrador cadastrado!', 'success')
+    }
+</script>
+</body>
+</html>
+
