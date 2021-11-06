@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Listar e deletar Administrador</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/administrador/cadastrar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<header class="header">
+    <div >
+        <img class="imagem-logo" src="/imagens/logo.svg">
+        <p id="p" class="bemvindo">Handbook Plane</p>
+        <img class="imagem-sair" src="/imagens/sair.svg">
+        <li><a class="sair"href="/login" title="">Sair</a></li>
+    </div>
+</header>
+
+<body id= "body"class="body">
+<div class="main_cadastro">
+    <table class="container">
+        <h1>Administradores</h1>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Login</th>
+            <th>Deletar</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="admin : ${admin}">
+
+            <td><span th:text="${admin.nome}"></span></td>
+            <td><span th:text="${admin.login}"></span></td>
+            <td><i><b><a
+                    th:href="@{/deletar/{id_admin}(idAdmin = ${admin.idAdmin})}"><i
+                    class="material-icons">delete_forever</i></a></b></i></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<script>
+const inputID = document.getElementById('admin');
+const id = inputID.value;
+    if (id > 0 && id != null) {
+        Swal.fire('Sucesso!', 'Administrador cadastrado!', 'success')
+    }
+</script>
+</body>
+</html>
