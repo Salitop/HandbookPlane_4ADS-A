@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Classe responsável por controlar as funções de login do sistema
  *
  * @Author: Kevin Melo
- * @Since: 05/10/2021
+ * @Since: 06/10/2021
  */
 @Controller
 public class LoginController {
