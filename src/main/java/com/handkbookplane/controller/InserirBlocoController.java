@@ -54,7 +54,7 @@ public class InserirBlocoController {
         return modelAndView;
     }*/
     @RequestMapping(value = "/inserirBloco", method = RequestMethod.POST, consumes = { "multipart/form-data" })
-    public String form(@RequestParam BlocoControllerModel bloco, @RequestParam(value = "PDF") MultipartFile PDF)
+    public String form(BlocoControllerModel bloco, @RequestParam(value = "PDF") MultipartFile PDF)
             throws IOException {
         BlocoRepository.save(BlocoMapper.converter(bloco,PDF));
         return "redirect:menuInicial";
