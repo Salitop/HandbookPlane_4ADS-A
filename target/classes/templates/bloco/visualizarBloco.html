@@ -36,41 +36,33 @@
                     <div class="div-2">
                         <table>
                             <tr >
-                                <th class="color-th">Bloco</th>
+                                <th class="color-th">Nome do Bloco</th>
                                 <th class="color-th">Seção</th>
                                 <th class="color-th">Subseção</th>
-                                <th class="color-th">N° Bloco</th>
-                                <th class="color-th">Código</th>
+                                <th class="color-th">Número bloco</th>
                                 <th class="color-th">Revisão</th>
-                                <th class="color-th"></th>
+                                <th class="color-th">Data Revisão</th>
+                                <th class="color-th">Remark</th>
+                                <th class="color-th">PDF</th>
+
                             </tr>
-                            <tr >
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-button"><a href="revisaoBloco"><input class="btn-vizualizar" type="button" value="Visualizar"></td>
+                            </thead>
+                            <tbody>
+                            <tr th:each="bloco : ${bloco}">
+
+                                <td class="td-color-1" th:text="${bloco.nomeBloco}"> </td>
+                                <td class="td-color-1" th:text="${bloco.secao}"></td>
+                                <td class="td-color-1" th:text="${bloco.subsecao}"></td>
+                                <td class="td-color-1" th:text="${bloco.nbloco}"></td>
+                                <td class="td-color-1" th:text="${bloco.revisao}"></td>
+                                <td class="td-color-1" th:text="${bloco.dataRev}"></td>
+                                <td class="td-color-1" th:text="${bloco.remark}"></td>
+                                <td><iframe th:src="@{'data:application/pdf;base64,'+${bloco.PDF_string}}"
+                                            width="900" height="1100">
+                                </iframe></td>
                             </tr>
-                            <tr >
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-button"><a href="revisaoBloco"><input class="btn-vizualizar" type="button" value="Visualizar"></td>
-                            </tr>
-                            <tr >
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-button"><a href="revisaoBloco"><input class="btn-vizualizar" type="button" value="Visualizar"></td>
-                            </tr>
+                            </tbody>
+
                         </table>
                     </div>
                 </div>
