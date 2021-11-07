@@ -16,11 +16,6 @@ public class BlocoControllerModel implements Serializable {
     private Integer revisao;
     private String dataRev;
     private String remark;
-    private byte[] PDF;
-    private String PDF_string;
-
-
-
 
     public Integer getIdBloco() {
         return idBloco;
@@ -93,27 +88,4 @@ public class BlocoControllerModel implements Serializable {
     public void setRemark(String remark) {
         this.remark = remark;
     }
-
-    public byte[] getPDF() {
-        return PDF;
-    }
-
-    public void setPDF(byte[] PDF) {
-        this.PDF = PDF;
-    }
-
-    public String getPDF_string() {
-        return PDF_string;
-    }
-
-    public void setPDF_string(String PDF_string) {
-        this.PDF_string = PDF_string;
-    }
-
-
-
-
-
-
-
 }
