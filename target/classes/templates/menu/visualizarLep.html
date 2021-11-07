@@ -12,7 +12,7 @@
 <header class="header">
     <div >
         <img class="imagem-logo" src="/imagens/logo.svg">
-        <p id="p" class="bemvindo">Bem vindo:(Nome de usuario)</p>
+        <p id="p" class="bemvindo">Bem vindo: <span th:text="${administrador.nome}"></span> </p>
         <a href="menuInicial"><img class="imagem-sair" src="/imagens/sair.svg"></a>
         <li><a class="sair"href="/login" title="">Sair</a></li>
     </div>
@@ -31,6 +31,7 @@
                         <h3 class="tag-0">Pesquisar:</h3>
                         <input class="input-forms-1" type='text' placeholder="Ex: Documento, Bloco, ID, Revisão"
                                name="nome" id="nome" required/>
+                        <a href="/(EventoPesquisar)"><img class="imagem-pesquisar" src="/imagens/lupaPesquisa.png"></a>
                     </div>
                     <div class="div-2">
                         <table>

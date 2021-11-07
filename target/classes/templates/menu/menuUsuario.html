@@ -12,7 +12,7 @@
 <header class="header">
 	<div >
 		<img class="imagem-logo" src="/imagens/logo.svg">
-		<p id="p" class="bemvindo">Bem vindo:(Nome de usuario)</p>
+		<p id="p" class="bemvindo">Bem vindo: <span th:text="${administrador.nome}"></span> </p>
 		<a href="menuInicial"><img class="imagem-sair" src="/imagens/sair.svg"></a>
 		<li><a class="sair"href="/login" title="">Sair</a></li>
 	</div>
@@ -35,7 +35,7 @@
 	                 <a href="/cadastrarAdministrador" class="tit-2">Cadastrar Usuário</a>
 	                 
 	                 <img class="img-3" src="/imagens/lep.svg">
-	                 <a href="/listarUsuario" class="tit-3">Lista de Usuários</a>
+	                 <a href="/listarAdministrador" class="tit-3">Lista de Usuários</a>
                 </div>
             </div>
         </div>

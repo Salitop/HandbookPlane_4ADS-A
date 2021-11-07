@@ -27,7 +27,7 @@ public class ListarUsuarioController {
     public ModelAndView telalistarUsuario() {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
 
-        ModelAndView mv = new ModelAndView("/menu/listarUsuario");
+        ModelAndView mv = new ModelAndView("/administrador/listaAdministrador");
         mv.addObject("administrador", administrador);
         return mv;
     }
