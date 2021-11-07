@@ -23,12 +23,4 @@ public class RevisaoBlocoController {
      * Método responsável por dar um get na tela menu Traço
      * @return ModelAndView
      */
-    @GetMapping(value = "/revisaoBloco")
-    public ModelAndView telarevisaoBloco() {
-        Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
-
-        ModelAndView mv = new ModelAndView("/bloco/revisaoBloco");
-        mv.addObject("administrador", administrador);
-        return mv;
-    }
 }
