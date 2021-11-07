@@ -18,6 +18,15 @@
 	float:left;
 }
 
+.imagem-pesquisar
+{
+    width: 30px;
+    padding-top: 29.8%;
+    padding-left: 1%;
+    height: 30px;
+}
+
+
 .sair{
 	font-size: 20px;
 	padding-top: 1.5%;
