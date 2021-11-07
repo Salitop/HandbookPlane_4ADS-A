@@ -36,25 +36,20 @@
                     <div class="div-2">
                         <table>
                             <tr >
-                                <th class="color-th">Bloco</th>
-                                <th class="color-th">Última Revisão</th>
+                                <th class="color-th">Nome do Bloco</th>
+                                <th class="color-th">Data Revisão</th>
                                 <th class="color-th"></th>
+
                             </tr>
-                            <tr >
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-button"><a href="revisaoBloco"><input class="btn-vizualizar" type="button" value="Escolher"></td>
+                            </thead>
+                            <tbody>
+                            <tr th:each="bloco : ${bloco}">
+
+                                <td class="td-color-1" th:text="${bloco.nomeBloco}"> </td>
+                                <td class="td-color-1" th:text="${bloco.dataRev}"></td>
+                                <td class="td-button"><a th:href="@{/revisaoBloco/{id_bloco}(idBLoco = ${bloco.idBloco})}"><input class="btn-vizualizar2" type="button" value="Selecionar"></a></td>
                             </tr>
-                            <tr >
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-button"><a href="revisaoBloco"><input class="btn-vizualizar" type="button" value="Escolher"></td>
-                            </tr>
-                            <tr >
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-button"><a href="revisaoBloco"><input class="btn-vizualizar" type="button" value="Escolher"></td>
-                            </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

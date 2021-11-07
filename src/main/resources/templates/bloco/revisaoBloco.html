@@ -25,20 +25,45 @@
         <div class="row about-container">
             <div class="col-lg-6">
                 <div class="div-container">
+                    <table>
+                        <tr >
+                            <th class="color-th">Nome do Bloco</th>
+                            <th class="color-th">Seção</th>
+                            <th class="color-th">Subseção</th>
+                            <th class="color-th">Code</th>
+                            <th class="color-th">Número bloco</th>
+                            <th class="color-th">Revisão</th>
+                            <th class="color-th">Data Revisão</th>
+                            <th class="color-th">Remark</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="bloco : ${bloco}">
+
+                            <td class="td-color-1" th:text="${bloco.nomeBloco}"> </td>
+                            <td class="td-color-1" th:text="${bloco.secao}"></td>
+                            <td class="td-color-1" th:text="${bloco.subsecao}"></td>
+                            <td class="td-color-1" th:text="${bloco.code}"></td>
+                            <td class="td-color-1" th:text="${bloco.nbloco}"></td>
+                            <td class="td-color-1" th:text="${bloco.revisao}"></td>
+                            <td class="td-color-1" th:text="${bloco.dataRev}"></td>
+                            <td class="td-color-1" th:text="${bloco.remark}"></td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                    <tr th:each="bloco : ${bloco}">
                     <input type="hidden" th:value="${admin}"
                            th:attr="name='admin'" id="admin"/>
                     <div class="div-1">
                         <h3 class="tag-0">Revisão do bloco:</h3>
-                        <h2>6-04-08</h2>
+                        <td class="td-color-1" th:text="${bloco.nomeBloco}"> </td>
                     </div>
 
                     <div class="div-1">
                         <h3 class="tag-1">Code:</h3>
-                        <select class="select-edit"name="select">
-                            <option value="valor1">Valor 1</option>
-                            <option value="valor2" selected>Valor 2</option>
-                            <option value="valor3">Valor 3</option>
-                        </select>
+                        <td class="td-color-1" th:text="${bloco.code}"> </td>
                     </div>
                     <div class="div-1">
                         <h3 class="tag-1">Descrição das mudanças:</h3>
