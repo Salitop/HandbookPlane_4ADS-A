@@ -44,10 +44,9 @@
                             </thead>
                             <tbody>
                             <tr th:each="bloco : ${bloco}">
-
                                 <td class="td-color-1" th:text="${bloco.nomeBloco}"> </td>
                                 <td class="td-color-1" th:text="${bloco.dataRev}"></td>
-                                <td class="td-button"><a th:href="@{/revisaoBloco/{id_bloco}(idBLoco = ${bloco.idBloco})}"><input class="btn-vizualizar2" type="button" value="Selecionar"></a></td>
+                                <td class="td-button"><a th:href="@{/revisaoBloco/{id_bloco}(idBloco = ${bloco.idBloco})/{nome_bloco}(nomeBloco = ${bloco.nomeBloco})}"><input class="btn-vizualizar2" type="button" value="Selecionar"></a></td>
                             </tr>
                             </tbody>
                         </table>
