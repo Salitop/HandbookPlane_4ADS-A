@@ -48,7 +48,7 @@ a{
 	background-color:#f0f0f0;
 	margin-left:15%;
 	max-width: 960px;
-	height:450px;
+	height:500px;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
@@ -70,13 +70,15 @@ a{
 }
 
 .img-1{
-	margin-left: 10%;
-	float:left;
+    height: 80px;
+    margin-left: 28%;
+    float: left;
+    width: 80px;
 }
 
 .tit-1{
-	margin-left:7%;
-	margin-top: 3.5%;
+    margin-left: 7%;
+    margin-top: 3.5%;
     float: left;
     display: inline;
     font-style: 'Roboto',sans-serif;
@@ -86,15 +88,17 @@ a{
 }
 
 .img-2{
-	margin-top: 25%;
-    margin-left: -27%;
+    width: 80px;
+    height: 80px;
+    margin-top: 15%;
+    margin-left: -34%;
     float: left;
 }
 
 .tit-2{
 	padding-bottom: 5%;
-    margin-top: 29%;
-    margin-left: -10%;
+    margin-top: 17%;
+    margin-left: -16%;
     float: left;
     display: inline;
     font-style: 'Roboto',sans-serif;
@@ -104,16 +108,17 @@ a{
 }
 
 .img-3{
-	height: 90px;
-    margin-top: 26%;
-    margin-left: 21.5%;
-    float: left;
+    height: 80px;
+    margin-top: 29%;
+    margin-left: -33.5%;
+    loat: left;
+    width: 80px;
 }
 
 .tit-3{
     padding-bottom: 17%;
-    margin-top: 4%;
-    margin-left: 5%;
+    margin-top: 31%;
+    margin-left: -17%;
     float: left;
     display: inline;
     font-style: 'Roboto',sans-serif;
@@ -123,14 +128,17 @@ a{
 }
 
 .img-4{
-    margin-left: -22%;
-    float: left;
+    width: 80px;
+        margin-top: 40%;
+        margin-left: -34%;
+        float: left;
+        height: 80px;
 }
 
 .tit-4{
     padding-bottom: 5%;
-    margin-top: 30%;
-    margin-left: -7.5%;
+    margin-top: 43%;
+    margin-left: -13.5%;
     float: left;
     display: inline;
     font-style: 'Roboto',sans-serif;
