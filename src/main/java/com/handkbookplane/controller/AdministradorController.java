@@ -32,7 +32,11 @@ public class AdministradorController {
      */
     @GetMapping(value = "/cadastrarAdministrador")
     public ModelAndView telaCadastraAdministrador() {
-        return new ModelAndView("/administrador/cadastrarAdministrador");
+        Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
+
+        ModelAndView mv = new ModelAndView("/administrador/cadastrarAdministrador");
+        mv.addObject("administrador", administrador);
+        return mv;
     }
 
     /**
@@ -67,12 +71,16 @@ public class AdministradorController {
 
     @GetMapping(value = "/listarAdministrador")
     public ModelAndView telaListaAdministradores() {
+
         ModelAndView modelAndView = new ModelAndView("/administrador/listaAdministrador");
         modelAndView.addObject("admin", administradorRepository.findAll());
+        Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
+        modelAndView.addObject("administrador", administrador);
+
         return modelAndView;
     }
 
-    @RequestMapping("/deletar/{id_tutor}")
+    @RequestMapping("/deletar/{id_admin}")
     public String deletarTutor(Integer idAdmin) {
         Administrador administrador = administradorRepository.findByIdAdmin(idAdmin);
         administradorRepository.delete(administrador);

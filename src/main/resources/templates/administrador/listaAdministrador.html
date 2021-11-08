@@ -2,46 +2,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Listar e deletar Administrador</title>
+    <title>Visualizar LEP</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="/administrador/cadastrar.css">
+    <link rel="stylesheet" href="/administrador/listaAdministrador.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <header class="header">
     <div >
         <img class="imagem-logo" src="/imagens/logo.svg">
-        <p id="p" class="bemvindo">Handbook Plane</p>
-        <img class="imagem-sair" src="/imagens/sair.svg">
+        <p id="p" class="bemvindo">Bem vindo: <span th:text="${administrador.nome}"></span> </p>
+        <a href="menuUsuario"><img class="imagem-sair" src="/imagens/sair.svg"></a>
         <li><a class="sair"href="/login" title="">Sair</a></li>
     </div>
 </header>
 
 <body id= "body"class="body">
 <div class="main_cadastro">
-    <table class="container">
-        <h1>Administradores</h1>
-        <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Login</th>
-            <th>Deletar</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="admin : ${admin}">
+    <h1 class="titulo-cadastro">Lista de Administradores</h1>
+    <form method='post'>
+        <div class="row about-container">
+            <div class="col-lg-6">
+                <div class="div-container">
+                    <input type="hidden" th:value="${admin}"
+                           th:attr="name='admin'" id="admin"/>
+                    <div class="div-1">
+                        <h3 class="tag-0">Pesquisar:</h3>
+                        <input class="input-forms-1" type='text' placeholder="Buscar por nome ou usuário"
+                               name="nome" id="nome" required/>
+                        <a href="/(EventoPesquisar)"><img class="imagem-pesquisar" src="/imagens/lupaPesquisa.png"></a>
+                    </div>
+                    <div class="div-2">
+                        <table>
+                            <tr >
+                                <th class="color-th">Nome</th>
+                                <th class="color-th">Usuário</th>
+                                <th class="color-th">Matrícula</th>
+                                <th class="color-th2"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="admin : ${admin}">
 
-            <td><span th:text="${admin.nome}"></span></td>
-            <td><span th:text="${admin.login}"></span></td>
-            <td><i><b><a
-                    th:href="@{/deletar/{id_admin}(idAdmin = ${admin.idAdmin})}"><i
-                    class="material-icons">delete_forever</i></a></b></i></td>
-        </tr>
-        </tbody>
-    </table>
+                                <td class="td-color-1" th:text="${admin.nome}"> </td>
+                                <td class="td-color-1" th:text="${admin.login}"></td>
+                                <td class="td-color-1" th:text="${admin.matricula}"></td>
+                                <td class="td-button"><a th:href="@{/deletar/{id_admin}(idAdmin = ${admin.idAdmin})}"><input class="btn-vizualizar2" type="button" value="Deletar"></a></td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 </div>
 <script>
