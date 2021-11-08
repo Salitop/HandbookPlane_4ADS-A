@@ -8,6 +8,7 @@ import com.handkbookplane.repository.BlocoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -28,8 +29,10 @@ public class EmitirRevisaoController {
 
     @Autowired
     BlocoRepository blocoRepository;
+
     /**
      * Método responsável por dar um get na tela menu Traço
+     *
      * @return ModelAndView
      */
     @GetMapping(value = "/emitirRevisao")
@@ -41,6 +44,7 @@ public class EmitirRevisaoController {
         Iterable<Bloco> bloco = blocoRepository.findAll();
 
         List<Bloco> blocosTotais = new ArrayList<>();
+
 
         for (Bloco blocos : bloco) {
 
@@ -54,21 +58,32 @@ public class EmitirRevisaoController {
         mv.addObject("administrador", administrador);
         return mv;
     }
+//PÁGINA PARA CADASTRAR A REVISÃO
 
-    @GetMapping(value = "/revisaoBloco/{idBloco}")
-    public ModelAndView telarevisaoBloco(Integer idBLoco) {
+    @GetMapping(value = "/revisaoBloco/{idBloco}/{nomeBloco}")
+    public ModelAndView telarevisaoBloco(Integer idBLoco, String nomeBloco) {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
 
         ModelAndView mv = new ModelAndView("/bloco/revisaoBloco");
 
         Bloco bloco = blocoRepository.findByIdBloco(idBLoco);
 
-            String pdf = Base64.getEncoder().encodeToString(bloco.getPDF());
-            bloco.setPDF_string(pdf);
+        Iterable<Bloco> blocoCode = blocoRepository.findByNomeBloco(nomeBloco);
 
+        mv.addObject("blocoCode", blocoCode);
         mv.addObject("bloco", bloco);
 
         mv.addObject("administrador", administrador);
         return mv;
     }
+
+    @PostMapping(value = "/revisaoBloco/{idBloco}/{nomeBloco}")
+    public ModelAndView cadRevisao(Bloco bloco) {
+        //Cadastrar revisão
+        ModelAndView mv = new ModelAndView("/bloco/revisaoBloco");
+        return mv;
+    }
+
+
+
 }
