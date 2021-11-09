@@ -45,12 +45,12 @@ Front-end Daniel Vargas Back-end Kevin Gabriel, Luiz Miguel e Edryan Matheus
 
 # Codelist
 
-![tela-fluxo](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-3/Doc/gif/fluxosite.gif)
+![tela-fluxo](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-3/Doc/gif/listarCodelist.gif)
 
 Front-end Daniel Vargas Back-end Kevin Gabriel, Luiz Miguel e Edryan Matheus
 
 # Burndown
-![burndown-sprint3](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-3/Doc/gif/listarCodelist.gif)
+![burndown-sprint3](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-3/Doc/Burndown/WhatsApp%20Image%202021-11-06%20at%2014.30.30.jpeg)
 
 Feito por Edryan Matheus
 
