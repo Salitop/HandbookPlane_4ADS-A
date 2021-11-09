@@ -54,4 +54,21 @@ public class VisualizarBlocoController {
         mv.addObject("administrador", administrador);
         return mv;
     }
+
+    @GetMapping(value = "/visualizarBlocoPDF/{id_bloco}")
+    public ModelAndView telavisualizarBlocoPDF(Integer idBloco) {
+        Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
+
+        ModelAndView mv = new ModelAndView("/bloco/visualizarBlocoPDF");
+
+        Bloco bloco = blocoRepository.findByIdBloco(idBloco);
+
+            String pdf = Base64.getEncoder().encodeToString(bloco.getPDF());
+            bloco.setPDF_string(pdf);
+
+        mv.addObject("bloco", bloco);
+
+        mv.addObject("administrador", administrador);
+        return mv;
+    }
 }

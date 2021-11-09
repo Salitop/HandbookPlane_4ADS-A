@@ -29,20 +29,22 @@
                            th:attr="name='admin'" id="admin"/>
                     <div class="div-1">
                         <h3 class="tag-0">Revisão do bloco:</h3>
-                        <select class="select-nome"name="select">
-                            <option selected th:each="blocoCode : ${blocoCode}" th:text="${blocoCode.nomeBloco}" disabled></option>
+                        <select class="select-nome"name="select" disabled>
+                            <option selected th:each="blocoCode : ${bloco}" th:text="${blocoCode.nomeBloco}" disabled></option>
                         </select>
                     </div>
 
                     <div class="div-1">
                         <h3 class="tag-1">Code:</h3>
-                        <select class="select-edit"name="select">
-                            <option th:each="blocoCode : ${blocoCode}" th:text="${blocoCode.code}"></option>
+                        <select class="select-edit"name="select" disabled>
+                            <option name="code"  th:each="blocoCode : ${bloco}" th:text="${blocoCode.code}"></option>
                         </select>
                     </div>
                     <div class="div-1">
                         <h3 class="tag-1">Descrição das mudanças:</h3>
-                        <textarea class="text-area-2"rows="4" cols="50" placeholder="Ex: Foi corrigido no bloco 01 o nome do avião modelo “X” para “Y’ "></textarea>
+                        <tr th:each="bloco : ${bloco}">
+
+                        <textarea name="descRevisao" class="text-area-2"rows="4" cols="50" placeholder="Ex: Foi corrigido no bloco 01 o nome do avião modelo “X” para “Y’ " th:text="${bloco.descRevisao}" ></textarea>
 
                     </div>
                     <input class="btn-salvar"type="submit" value="Salvar">
@@ -53,10 +55,10 @@
 </div>
 </div>
 <script>
-const inputID = document.getElementById('admin');
+const inputID = document.getElementById('bloco');
 const id = inputID.value;
     if (id > 0 && id != null) {
-        Swal.fire('Sucesso!', 'Administrador cadastrado!', 'success')
+        Swal.fire('Sucesso!', 'Bloco Alterado!', 'success')
     }
 </script>
 </body>

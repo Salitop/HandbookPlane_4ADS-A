@@ -16,6 +16,7 @@ public class BlocoControllerModel implements Serializable {
     private Integer revisao;
     private String dataRev;
     private String remark;
+    private String descRevisao;
 
     public Integer getIdBloco() {
         return idBloco;

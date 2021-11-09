@@ -180,3 +180,9 @@ table, th, td {
 .td-button{
 	background-color:#bdd7ee;
 }
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
