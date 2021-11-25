@@ -111,15 +111,15 @@ input{
 }
 
 .tag-1{
-	margin-top:2.5%;
-	margin-left: -51%!important;
-    float: left!important;
+	    margin-top: 2.5%;
+        margin-left: -54%!important;
+        float: left!important;
 }
 .tag-2{
-	width: 12%;
-    margin-left: -67%!important;
-    float: left;
-    margin-top: 7%;
+	    width: 12%;
+        margin-left: -70%!important;
+        float: left;
+        margin-top: 7%;
 }
 .tag-3{
 	width:12%;
@@ -160,7 +160,7 @@ input{
 .input-forms-2{
 	margin-top:2%;
 	float: left;
-    margin-left: -40.4%!important;
+    margin-left: -43.4%!important;
     margin-left: 5%;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
@@ -174,7 +174,7 @@ input{
 
 .input-forms-3{
 	float: left;
-    margin-left: -51.9%!important;
+    margin-left: -54.9%!important;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -255,4 +255,44 @@ input{
     color: black;
     cursor: pointer;
     float: left;
+}
+
+.tooltip {
+margin-left:7px;
+margin-top:10px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  float:left;
+}
+div.tooltip span {
+  position: absolute;
+  text-align: center;
+  visibility: hidden;
+  background-color: #000;
+  color: #FFF;
+  padding: 5px 10px;
+  width:160px;
+}
+div.tooltip span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-bottom: 8px solid #000;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+div:hover.tooltip span {
+  visibility: visible;
+  opacity: 0.9;
+  top: 30px;
+  left: 0;
+  z-index: 999;
+}
+.icon-info{
+width:20px;
+height:20px;
 }

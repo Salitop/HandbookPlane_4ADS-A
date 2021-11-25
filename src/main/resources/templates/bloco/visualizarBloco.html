@@ -18,21 +18,25 @@
     </div>
 </header>
 
-<form method='get'>
 
-    <h3 class="tag-0">Pesquisar:</h3>
-    <input class="input-forms-1" type='text' placeholder="Ex: 4-02 "
-           name="name" id="name"/>
-    <input class="btn-salvar"type="submit" value="Pesquisar">
-</form>
+
 
 <body id= "body"class="body">
 <div class="main_cadastro">
     <h1 class="titulo-cadastro">Visualizar Bloco</h1>
-    <form method='post'>
-        <div class="row about-container">
+    <div class="row about-container">
+
+
             <div class="col-lg-6">
                 <div class="div-container">
+                    <form method='get'>
+
+                        <h3 class="tag-0">Pesquisar:</h3>
+                        <input class="input-forms-1" type='text' placeholder="Ex: 4-02 "
+                               name="name" id="name"/>
+                        <input class="btn-salvar"type="submit" value="Pesquisar">
+                    </form>
+                    <form method='post'>
                     <input type="hidden" th:value="${admin}"
                            th:attr="name='admin'" id="admin"/>
                     <div class="div-2">
@@ -63,10 +67,10 @@
 
                         </table>
                     </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </form>
+    </div>
 </div>
 </div>
 <script>

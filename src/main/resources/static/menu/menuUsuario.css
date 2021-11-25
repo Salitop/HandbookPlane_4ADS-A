@@ -1,7 +1,7 @@
 .header{
 	height:70px;
 	background:#0C3756;
-	
+
 }
 .imagem-logo{
 	margin-top:10px;
@@ -121,4 +121,106 @@ a{
     color: black;
     weight: 400;	
 }
-    
+
+@media (min-width: 1920px){
+.header {
+    height: 101px;
+    background: #0C3756;
+}
+.imagem-logo {
+     margin-top: 10px;
+     margin-left: 70px;
+     height: 10%;
+     width: 6%;
+     float: left;
+ }
+.bemvindo {
+  font-size: 31px;
+  padding-top: 1.5%;
+  margin-left: 33%;
+  color: white;
+  float: left;
+}
+.sair {
+    margin-top: -2.5%;
+    font-size: 31px;
+    padding-top: 0.5%;
+    margin-left: 28%;
+    color: white;
+    float: left;
+}
+.menu-inicial {
+   margin-left: 10%;
+   font-size: 75px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+}
+.div-container {
+    padding-top: 5%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    background-color: #f0f0f0;
+    margin-left: 15%;
+    max-width: 1500px;
+    height: 700px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 25%);
+}
+.imagem-sair {
+    margin-top: 29px;
+    margin-left: 22%;
+    height: 3%;
+    width: 3%;
+    float: left;
+}
+.img-1 {
+    width: 10%;
+    margin-left: 30%;
+    float: left;
+}
+.tit-1 {
+    /* font-size: 30px; */
+    margin-left: 7%;
+    margin-top: 3.5%;
+    float: left;
+    display: inline;
+    font-style: 'Roboto',sans-serif;
+    font-size: 41px;
+    color: black;
+    font-weight: 400;
+}
+.img-2 {
+    width: 10%;
+    margin-top: 15%;
+    margin-left: -27%;
+    float: left;
+}
+.tit-2 {
+    padding-bottom: 5%;
+    margin-top: 19%;
+    margin-left: -11.5%;
+    float: left;
+    display: inline;
+    font-style: 'Roboto',sans-serif;
+    font-size: 41px;
+    color: black;
+    weight: 400;
+}
+.img-3 {
+    width: 10%;
+    /* height: 90px; */
+    margin-top: 30%;
+    margin-left: -37.5%;
+    float: left;
+}
+.tit-3 {
+    padding-bottom: 5%;
+    margin-top: 33%;
+    margin-left: -21.5%;
+    float: left;
+    display: inline;
+    font-style: 'Roboto',sans-serif;
+    font-size: 41px;
+    color: black;
+    weight: 400;
+}
+}
