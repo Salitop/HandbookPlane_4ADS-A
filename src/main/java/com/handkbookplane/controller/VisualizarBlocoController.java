@@ -8,6 +8,7 @@ import com.handkbookplane.repository.BlocoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -28,15 +29,46 @@ public class VisualizarBlocoController {
 
     @Autowired
     BlocoRepository blocoRepository;
+
     /**
      * Método responsável por dar um get na tela menu Traço
      * @return ModelAndView
      */
     @GetMapping(value = "/visualizarBloco")
-    public ModelAndView telavisualizarBloco() {
+    public ModelAndView telavisualizarBloco(String name) {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
 
         ModelAndView mv = new ModelAndView("/bloco/visualizarBloco");
+
+        if (name != null) {
+
+            ArrayList<Bloco> bloco = blocoRepository.findByNomeBloco(name);
+
+            if (bloco.size() != 0) {
+
+                List<Bloco> blocosTotais = new ArrayList<>();
+
+                for (Bloco blocos : bloco) {
+
+                    String pdf = Base64.getEncoder().encodeToString(blocos.getPDF());
+                    blocos.setPDF_string(pdf);
+                    blocosTotais.add(blocos);
+                }
+
+                mv.addObject("bloco", blocosTotais);
+
+                mv.addObject("administrador", administrador);
+
+                return mv;
+            }
+
+            Iterable<Bloco> blocos = blocoRepository.findAll();
+
+            mv.addObject("bloco", blocos);
+
+            mv.addObject("administrador", administrador);
+            return mv;
+        }
 
         Iterable<Bloco> bloco = blocoRepository.findAll();
 
@@ -70,5 +102,11 @@ public class VisualizarBlocoController {
 
         mv.addObject("administrador", administrador);
         return mv;
+    }
+
+    @GetMapping(value = "/pesqBloco")
+    public ModelAndView telaPesquisaBloco(String name) {
+        System.out.println(name);
+        return new ModelAndView();
     }
 }
