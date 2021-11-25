@@ -12,51 +12,49 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * Classe responsável por ser o modelo do bloco, além de criar a tabela no banco de dados
+ * Classe responsável por ser o modelo do Codelist, além de criar a tabela no banco de dados
  *
- * @Author: Edryan Maciel
- * Since: 06/09/2021
+ * @Author: Luiz Miguel
+ * Since: 23/11/2021
  */
 @Entity
 @Getter
 @Setter
 
 
-public class Bloco {
+public class Codelist {
 
-    private String nomeBloco;
     @GeneratedValue
     private String secao;
     private String subsecao;
     private Integer nbloco;
+    private String apelidoBloco; //Nome do bloco que será exibido no codelist
     private Integer code;
-    private Integer revisao;
-    private String dataRev;
     private byte[] PDF;
     private String PDF_string;
-
+    private String remark; //Identificador do traço
 
     /**
      * Gerando campos do Bloco
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idBloco;
+    private Integer idCodelist;
 
-    public Integer getIdBloco() {
-        return idBloco;
+    public Integer getIdCodelist() {
+        return idCodelist;
     }
 
-    public void setIdBloco(Integer idBloco) {
-        this.idBloco = idBloco;
+    public void setIdCodelist(Integer idCodelist) {
+        this.idCodelist = idCodelist;
     }
 
-    public String getNomeBloco() {
-        return nomeBloco;
+    public String getApelidoBloco() {
+        return apelidoBloco;
     }
 
-    public void setNomeBloco(String nomeBloco) {
-        this.nomeBloco = nomeBloco;
+    public void setApelidoBloco(String apelidoBloco) {
+        this.apelidoBloco = apelidoBloco;
     }
 
     public String getSecao() {
@@ -91,20 +89,12 @@ public class Bloco {
         this.code = code;
     }
 
-    public Integer getRevisao() {
-        return revisao;
+    public String getRemark() {
+        return remark;
     }
 
-    public void setRevisao(Integer revisao) {
-        this.revisao = revisao;
-    }
-
-    public String getDataRev() {
-        return dataRev;
-    }
-
-    public void setDataRev(String dataRev) {
-        this.dataRev = dataRev;
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 
     public byte[] getPDF() {
@@ -122,7 +112,5 @@ public class Bloco {
     public void setPDF_string(String PDF_string) {
         this.PDF_string = PDF_string;
     }
-
-
 
 }

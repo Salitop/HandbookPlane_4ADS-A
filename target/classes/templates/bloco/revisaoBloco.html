@@ -37,12 +37,12 @@
                     <div class="div-1">
                         <h3 class="tag-1">Code:</h3>
                         <select class="select-edit"name="select">
-                            <option th:each="blocoCode : ${blocoCode}" th:text="${blocoCode.code}"></option>
+                            <option name="code"  th:each="blocoCode : ${blocoCode}" th:text="${blocoCode.code}"></option>
                         </select>
                     </div>
                     <div class="div-1">
                         <h3 class="tag-1">Descrição das mudanças:</h3>
-                        <textarea class="text-area-2"rows="4" cols="50" placeholder="Ex: Foi corrigido no bloco 01 o nome do avião modelo “X” para “Y’ "></textarea>
+                        <textarea name="revisao" class="text-area-2"rows="4" cols="50" placeholder="Ex: Foi corrigido no bloco 01 o nome do avião modelo “X” para “Y’ "></textarea>
 
                     </div>
                     <input class="btn-salvar"type="submit" value="Salvar">

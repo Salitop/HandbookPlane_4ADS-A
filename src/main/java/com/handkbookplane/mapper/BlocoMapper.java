@@ -13,7 +13,6 @@ public class BlocoMapper {
 
         var blocoBanco = new Bloco();
         blocoBanco.setNomeBloco(bloco.getNomeBloco());
-        blocoBanco.setRemark(bloco.getRemark());
         blocoBanco.setRevisao(bloco.getRevisao());
         blocoBanco.setCode(bloco.getCode());
         blocoBanco.setDataRev(bloco.getDataRev());
