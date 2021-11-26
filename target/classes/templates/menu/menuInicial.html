@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Menu Inicial</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/menu/menuInicial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<header class="header">
+	<input type="hidden" th:value="${administrador}"
+		   th:attr="name='administrador'" id="administrador"/>
+	<div >
+		<img class="imagem-logo" src="/imagens/logo.svg">
+		<p id="p" class="bemvindo">Bem vindo: <span th:text="${administrador.nome}"></span> </p>
+		<li><a class="sair"href="/login" title="">Sair</a></li>
+	</div>
+</header>
+
+<body id= "body"class="body">
+<div class="main_cadastro">
+    <h1 class="menu-inicial">Menu Inicial</h1>
+    <form method='post'>
+        <div class="row about-container">
+            <div class="col-lg-6">
+				<div class="div-container">
+	                 <img class="img-1" src="/imagens/perfil.svg">
+	                 <a href="/menuUsuario" class="tit-1">Usuários</a>
+
+	                 <img class="img-2" src="/imagens/blocos.svg">
+	                 <a href="/menuBloco" class="tit-2">Blocos</a>
+
+	                 <img class="img-3" src="/imagens/tracos.svg">
+	                 <a href="/menuTraco" class="tit-3">Traços</a>
+
+	                 <img class="img-4" src="/imagens/codelist.svg">
+	                 <a href="/codelist" class="tit-4">Codelist</a>
+
+	                 <img class="img-5" src="/imagens/lep.svg">
+	                 <a href="/visualizarLep" class="tit-5">LEP</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

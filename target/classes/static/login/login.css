@@ -1,0 +1,93 @@
+#body{
+	background-color: #0B2E50;
+}
+
+.imagem-logo{
+	margin-top: 2%;
+	margin-left:15%;
+	width:12%;
+	height:12%;
+	float:left;
+}
+
+h1{
+	padding-left:12%;
+	float:left;
+	padding-top: 3%;
+	color:white;
+	font-family: 'Roboto', sans-serif;
+}
+
+.div-login{
+	float:left;
+	margin-top: 7% ;
+	margin-right: 15%;
+	margin-left: 6%;
+	width:400px;
+	height:350px;
+	border:3px solid white;
+	background-color:#1766A6;
+}
+
+#login-titulo{
+	margin-left: 28%;
+}
+
+#login-entrada{
+	margin-top: 25%;
+}
+
+h3{
+	color:white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	margin-left: 15%;
+}
+
+#input-login{
+	height:7%;
+	width:70%;
+	margin-left:15%;
+	border-radius: 6px;
+	border-color: #ffffff;
+}
+
+#input-senha{
+	height:7%;
+	width:70%;
+	margin-left:15%;
+	border-radius: 6px;
+	border-color: #ffffff;
+}
+
+.btn-salvar{
+	margin-top:0;
+	margin-left: 70%;
+	width:25%;
+	height:10%;
+	background-color: #20BAF0;
+	color:white;
+	cursor: pointer;
+	border-color: #1766A6;
+	display:inline;
+	float:left;
+}
+
+.btn-salvar:hover{
+	transition:0.5s;
+	background-color:#068AB9;
+}
+
+.esqueceu-senha{
+	text-decoration: underline;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	color:white;
+	display:inline;
+	float:left;
+	margin:15% 15% 0 16%;
+}
+
+.login-esqueceu{
+	display:inline;
+}
