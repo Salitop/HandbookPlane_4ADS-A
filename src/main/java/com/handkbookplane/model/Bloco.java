@@ -30,23 +30,9 @@ public class Bloco {
     private Integer code;
     private Integer revisao;
     private String dataRev;
-    private String remark;
     private byte[] PDF;
     private String PDF_string;
     private String descRevisao;
-
-    public Bloco(String nomeBloco, String secao, String subsecao, Integer nbloco, Integer code, Integer revisao, String dataRev, String remark, String descRevisao, Integer idBloco) {
-        this.nomeBloco = nomeBloco;
-        this.secao = secao;
-        this.subsecao = subsecao;
-        this.nbloco = nbloco;
-        this.code = code;
-        this.revisao = revisao;
-        this.dataRev = dataRev;
-        this.remark = remark;
-        this.descRevisao = descRevisao;
-        this.idBloco = idBloco;
-    }
 
     /**
      * Gerando campos do Bloco
@@ -54,13 +40,6 @@ public class Bloco {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idBloco;
-
-    public Bloco() {
-
-    }
-
-    public Bloco(String nomeBloco, String secao, String subsecao, int parseInt, int parseInt1, int parseInt2, String dataRev, String remark) {
-    }
 
     public Integer getIdBloco() {
         return idBloco;
@@ -124,14 +103,6 @@ public class Bloco {
 
     public void setDataRev(String dataRev) {
         this.dataRev = dataRev;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
     }
 
     public byte[] getPDF() {
