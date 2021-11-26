@@ -188,3 +188,95 @@ table, th, td {
 	color:white;
 	cursor: pointer;
 }
+
+@media (min-width: 1920px){
+.header {
+    height: 101px;
+    background: #0C3756;
+}
+.imagem-logo {
+     margin-top: 10px;
+     margin-left: 70px;
+     height: 10%;
+     width: 6%;
+     float: left;
+ }
+.bemvindo {
+  font-size: 31px;
+  padding-top: 1.5%;
+  margin-left: 33%;
+  color: white;
+  float: left;
+}
+.sair {
+    margin-top: -2.5%;
+    font-size: 31px;
+    padding-top: 0.5%;
+    margin-left: 28%;
+    color: white;
+    float: left;
+}
+.titulo-cadastro{
+   margin-left: 10%;
+   font-size: 75px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+}
+.div-container {
+    padding-top: 5%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    background-color: #f0f0f0;
+    margin-left: 15%;
+    max-width: 1500px;
+    height: 700px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 25%);
+}
+.imagem-sair {
+    margin-top: 29px;
+    margin-left: 22%;
+    height: 3%;
+    width: 3%;
+    float: left;
+}
+.tag-0 {
+    font-size: 36px;
+    margin-top: 1.5%;
+    width: 10%;
+    margin-left: 10%!important;
+    float: left!important;
+}
+.input-forms-1 {
+    height: 35px;
+    margin-left: 3%;
+    width: 50%;
+    font-size: 28px;
+}
+a {
+        width: 6.5%;
+    /* width: inherit; */
+    height: 32px;
+}
+.imagem-pesquisar {
+    width: 40px;
+    padding-top: 29.8%;
+    padding-left: 1%;
+    height: 40px;
+}
+.div-2 {
+    margin-top: 5%;
+    width: 90%;
+    height: 50%;
+    margin-left: 15%;
+}
+table {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 80%;
+    height: 50%;
+}
+table, tr, td {
+    font-size: 26px;
+}
+}

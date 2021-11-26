@@ -35,6 +35,7 @@
                     </div>
                     <div class="div-2">
                         <table>
+                            <thead>
                             <tr >
                                 <th class="color-th">Seção</th>
                                 <th class="color-th">Subseção</th>
@@ -42,6 +43,7 @@
                                 <th class="color-th">Nome do Bloco</th>
                                 <th class="color-th">Code</th>
                                 <th class="color-th">Remark</th>
+                                <th class="color-th"></th>
 
                             </tr>
                             </thead>
@@ -53,7 +55,8 @@
                                 <td class="td-color-1" th:text="${bloco.nbloco}"></td>
                                 <td class="td-color-1" th:text="${bloco.nomeBloco}"> </td>
                                 <td class="td-color-1" th:text="${bloco.code}"></td>
-                                <td class="td-color-1" th:text="${bloco.remark}"></td>
+                                <td class="td-color-1" th:text="${bloco.code}"></td>
+                                <td class="td-button"><a href=""><input class="btn-vizualizar2" type="button" value="Deletar"></td>
                             </tr>
                             </tbody>
 

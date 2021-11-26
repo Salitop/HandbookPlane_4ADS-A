@@ -19,6 +19,8 @@
 </header>
 
 
+
+
 <body id= "body"class="body">
 <div class="main_cadastro">
     <h1 class="titulo-cadastro">Visualizar Bloco</h1>
@@ -53,7 +55,7 @@
                             <tbody>
                             <tr th:each="bloco : ${bloco}">
 
-                                <td class="td-color-1" th:text="${bloco.nomeBloco}"></td>
+                                <td class="td-color-1" th:text="${bloco.nomeBloco}"> </td>
                                 <td class="td-color-1" th:text="${bloco.secao}"></td>
                                 <td class="td-color-1" th:text="${bloco.subsecao}"></td>
                                 <td class="td-color-1" th:text="${bloco.code}"></td>

@@ -177,3 +177,18 @@ table, th, td {
 .td-button{
 	background-color:#bdd7ee;
 }
+.div-3{
+	display:flex;
+	flex-direction: column;
+	justify-content: normal;
+}
+.div-4{
+	display:flex;
+	flex-direction: row;
+	justify-content: normal;
+}
+.tag-2{
+    width: 9%;
+    margin-left: 16%;
+
+}
