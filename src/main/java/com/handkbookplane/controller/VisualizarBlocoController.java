@@ -8,7 +8,6 @@ import com.handkbookplane.repository.BlocoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -46,16 +45,7 @@ public class VisualizarBlocoController {
 
             if (bloco.size() != 0) {
 
-                List<Bloco> blocosTotais = new ArrayList<>();
-
-                for (Bloco blocos : bloco) {
-
-                    String pdf = Base64.getEncoder().encodeToString(blocos.getPDF());
-                    blocos.setPDF_string(pdf);
-                    blocosTotais.add(blocos);
-                }
-
-                mv.addObject("bloco", blocosTotais);
+                mv.addObject("bloco", bloco);
 
                 mv.addObject("administrador", administrador);
 
@@ -72,16 +62,7 @@ public class VisualizarBlocoController {
 
         Iterable<Bloco> bloco = blocoRepository.findAll();
 
-        List<Bloco> blocosTotais = new ArrayList<>();
-
-        for (Bloco blocos : bloco) {
-
-            String pdf = Base64.getEncoder().encodeToString(blocos.getPDF());
-            blocos.setPDF_string(pdf);
-            blocosTotais.add(blocos);
-        }
-
-        mv.addObject("bloco", blocosTotais);
+        mv.addObject("bloco", bloco);
 
         mv.addObject("administrador", administrador);
         return mv;
@@ -102,11 +83,5 @@ public class VisualizarBlocoController {
 
         mv.addObject("administrador", administrador);
         return mv;
-    }
-
-    @GetMapping(value = "/pesqBloco")
-    public ModelAndView telaPesquisaBloco(String name) {
-        System.out.println(name);
-        return new ModelAndView();
     }
 }

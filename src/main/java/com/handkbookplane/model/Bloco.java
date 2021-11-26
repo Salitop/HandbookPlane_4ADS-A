@@ -30,7 +30,6 @@ public class Bloco {
     private Integer code;
     private Integer revisao;
     private String dataRev;
-    private String remark;
     private byte[] PDF;
     private String PDF_string;
     private String descRevisao;
@@ -104,14 +103,6 @@ public class Bloco {
 
     public void setDataRev(String dataRev) {
         this.dataRev = dataRev;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
     }
 
     public byte[] getPDF() {
