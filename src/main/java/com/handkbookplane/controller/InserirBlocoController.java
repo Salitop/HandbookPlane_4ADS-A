@@ -134,7 +134,6 @@ public class InserirBlocoController {
         bloco.setCode(Integer.parseInt(code));
         bloco.setRevisao(Integer.parseInt(revisao));
         bloco.setDataRev(dataRev);
-        bloco.setRemark(remark);
 
         return bloco;
     }
