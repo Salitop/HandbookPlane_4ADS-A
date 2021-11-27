@@ -21,6 +21,12 @@
 <body id= "body"class="body">
 <div class="main_cadastro">
     <h1 class="titulo-cadastro">Criar Traço</h1>
+	<form method='get'>
+		<h3 class="tag-0">Pesquisar:</h3>
+		<input class="input-forms-1" type='text' placeholder="Ex: Bloco, Code"
+			   name="name" id="name" required/>
+		<input class="btn-salvar"type="submit" value="Pesquisar"><img class="imagem-pesquisar" src="/imagens/lupaPesquisa.png"></a>
+	</form>
     <form method='post'>
         <div class="row about-container">
             <div class="col-lg-6">
@@ -28,10 +34,7 @@
 	                <input type="hidden" th:value="${admin}"
 	                       th:attr="name='admin'" id="admin"/>
 	                 <div class="div-1">
-					<h3 class="tag-0">Pesquisar:</h3>
-	                <input class="input-forms-1" type='text' placeholder="Ex: Bloco, Code"
-	                       name="nome" id="pesquisar" required/>
-						 <a href="/(EventoPesquisar)"><img class="imagem-pesquisar" src="/imagens/lupaPesquisa.png"></a>
+
 	                 </div>
 	               <div class="div-3">
 					   <form>
@@ -52,31 +55,21 @@
 	               </div>
 	               <div class="div-2">
 	               <table>
-					<tr >
-					<th class="color-th">Selecionar</th>
-					<th class="color-th">Bloco</th>
-					<th class="color-th">Code</th>
-					<th class="color-th"></th>
-					</tr>
-					<tr >
-					<td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
-					<td class="td-color-1">linha</td>
-					<td class="td-color-1">linha</td>
-					<td class="td-button"><input class="btn-vizualizar"type="button" value="Vizualizar"></td>
-					</tr>
-					<tr >
-					<td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
-					<td class="td-color-1">linha</td>
-					<td class="td-color-1">linha</td>
-					<td class="td-button"><input class="btn-vizualizar"type="button" value="Vizualizar"></td>
-					</tr>
-					<tr >
-					<td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
-					<td class="td-color-1">linha</td>
-					<td class="td-color-1">linha</td>
-					<td class="td-button"><input class="btn-vizualizar" type="button" value="Vizualizar"></td>
-					</tr>
-					</table>
+					   <th class="color-th">Selecionar</th>
+					   <th class="color-th">Bloco</th>
+					   <th class="color-th">Code</th>
+					   <th class="color-th">PDF</th>
+					   </tr>
+					   <tbody>
+
+					   <tr th:each="bloco : ${bloco}">>
+						   <td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
+						   <td class="td-color-1" th:text="${bloco.nomeBloco}"></td>
+						   <td class="td-color-1" th:text="${bloco.code}"></td>
+						   <td class="td-button"><a th:href="@{/visualizarBlocoPDF/{id_bloco}(idBloco = ${bloco.idBloco})}"><input class="btn-vizualizar" type="button" value="Pesquisar"></a></td>
+					   </tr>
+					   </tbody>
+				   </table>
 	               </div>
                 </div>
             </div>
