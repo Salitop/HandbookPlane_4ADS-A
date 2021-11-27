@@ -2,14 +2,18 @@ package com.handkbookplane.controller;
 
 import com.handkbookplane.model.Administrador;
 import com.handkbookplane.model.Bloco;
+import com.handkbookplane.model.Traco;
 import com.handkbookplane.model.Usuario;
 import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.BlocoRepository;
+import com.handkbookplane.repository.TracoRepository;
+import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.thymeleaf.standard.expression.MessageExpression;
 
 import java.util.ArrayList;
 import java.util.Base64;
@@ -26,6 +30,8 @@ public class CriarTracoController {
     BlocoRepository blocoRepository;
     @Autowired
     AdministradorRepository administradorRepository;
+    @Autowired
+    TracoRepository tracoRepository;
     /**
      * Método responsável por dar um get na tela menu Traço
      * @return ModelAndView
@@ -80,6 +86,13 @@ public class CriarTracoController {
         mv.addObject("bloco", blocosTotais);
 
         mv.addObject("administrador", administrador);
+        return mv;
+    }
+
+    //Deverá cadastrar tanto Traço quanto Codelist
+    @PostMapping(value = "/criarTraco")
+    public ModelAndView criarTraco(Traco traco) {
+        ModelAndView mv = new ModelAndView();
         return mv;
     }
 }
