@@ -8,6 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Classe responsável por controlar as funções do sistema
  *
@@ -24,10 +27,11 @@ public class ListarUsuarioController {
      * @return ModelAndView
      */
     @GetMapping(value = "/listarUsuario")
-    public ModelAndView telalistarUsuario() {
+    public ModelAndView telalistarUsuario( String nome) {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
-
         ModelAndView mv = new ModelAndView("/administrador/listaAdministrador");
+
+
         mv.addObject("administrador", administrador);
         return mv;
     }
