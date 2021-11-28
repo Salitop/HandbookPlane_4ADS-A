@@ -50,7 +50,7 @@ public class AdministradorController {
      * @param administrador
      * @return ModelAndView
      */
-/*
+
     @PostMapping(value = "/cadastrarAdministrador")
     public ModelAndView cadastraAdministrador(Administrador administrador) {
         ModelAndView modelAndView = new ModelAndView();
@@ -74,7 +74,7 @@ public class AdministradorController {
         modelAndView.setViewName("/administrador/cadastrarAdministrador");
         return modelAndView;
     }
-*/
+
     @GetMapping(value = "/listarAdministrador")
     public ModelAndView telaListaAdministradores(String nome) {
 
