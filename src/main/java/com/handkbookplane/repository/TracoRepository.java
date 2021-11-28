@@ -1,8 +1,11 @@
 package com.handkbookplane.repository;
 
+import com.handkbookplane.model.Bloco;
 import com.handkbookplane.model.Traco;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
 
 /**
  * Interface responsável por comunicar com o banco de dados, utilizando funções básicas como:
@@ -15,6 +18,6 @@ import org.springframework.stereotype.Repository;
 public interface TracoRepository extends CrudRepository<Traco, String>
 
 {
-
+    ArrayList<Traco> findByNomeTraco(String nomeTraco);
 
 }
