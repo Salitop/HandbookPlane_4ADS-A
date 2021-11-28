@@ -29,7 +29,7 @@ Front-end Daniel Vargas e Back-end Kevin Gabriel
 
 Front-end Daniel Vargas e Back-end Luiz Miguel
 
-# Cadsatro Traços
+# Cadastro Traços
 
 
 Front-end Daniel Vargas e Back-end Luiz Miguel 
