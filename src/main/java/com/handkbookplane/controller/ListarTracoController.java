@@ -74,11 +74,11 @@ public class ListarTracoController {
 
         if(idTraco != null)
         {
-            ModelAndView mv = new ModelAndView("/traco/visualizarTracoPDF");
+            ModelAndView mv = new ModelAndView("/tracos/visualizarTracoPDF");
 
             Traco traco = tracoRepository.findByIdTraco(idTraco);
 
-            String pdf = Base64.getEncoder().encodeToString(traco.getPDF()); //Ta dando pau aqui, se pá é pq ta sem o mapper k
+            String pdf = Base64.getEncoder().encodeToString(traco.getPDF());
             traco.setPDF_string(pdf);
 
             mv.addObject("traco", traco);
@@ -88,7 +88,7 @@ public class ListarTracoController {
         }
         else
         {
-            ModelAndView mv = new ModelAndView("/traco/menuTraco.html");
+            ModelAndView mv = new ModelAndView("/tracos/menuTraco.html");
             mv.addObject("administrador", administrador);
             return mv;
         }
