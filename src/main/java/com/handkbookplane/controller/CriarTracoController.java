@@ -2,15 +2,23 @@ package com.handkbookplane.controller;
 
 import com.handkbookplane.model.Administrador;
 import com.handkbookplane.model.Bloco;
+import com.handkbookplane.model.Traco;
 import com.handkbookplane.model.Usuario;
+import com.handkbookplane.model.Codelist;
 import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.BlocoRepository;
+import com.handkbookplane.repository.CodelistRepository;
+import com.handkbookplane.repository.TracoRepository;
+import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.thymeleaf.standard.expression.MessageExpression;
 
+import javax.persistence.Access;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -26,6 +34,11 @@ public class CriarTracoController {
     BlocoRepository blocoRepository;
     @Autowired
     AdministradorRepository administradorRepository;
+    @Autowired
+    TracoRepository tracoRepository;
+    @Autowired
+    CodelistRepository codelistRepository;
+
     /**
      * Método responsável por dar um get na tela menu Traço
      * @return ModelAndView
@@ -81,5 +94,33 @@ public class CriarTracoController {
 
         mv.addObject("administrador", administrador);
         return mv;
+    }
+
+    //Deverá cadastrar tanto Traço quanto Codelist
+    @PostMapping(value = "/criarTraco")
+    public ModelAndView criarTraco(Traco traco, Codelist codelist,Integer idBloco) {
+        if(idBloco != null) {
+            ModelAndView mv = new ModelAndView("/tracos/criarTraco");
+            //Puxando informações do bloco
+            Bloco bloco = blocoRepository.findByIdBloco(idBloco);
+            //Salvando PDF do bloco no Traço
+            byte[] pdf = bloco.getPDF();
+            traco.setPDF(pdf);
+            //Cadastrando Traço
+            mv.addObject("traco", tracoRepository.save(traco));
+            //Cadastrando no codelist
+            codelist.setCode(bloco.getCode());
+            codelist.setApelidoBloco(bloco.getNomeBloco());
+            codelist.setNbloco(bloco.getNbloco());
+            codelist.setSecao(bloco.getSecao());
+            codelist.setSubsecao(bloco.getSubsecao());
+
+            mv.addObject("codelist",codelistRepository.save(codelist));
+            return mv;
+        }
+        else{
+            ModelAndView mv = new ModelAndView("/tracos/criarTraco");
+            return mv;
+        }
     }
 }
