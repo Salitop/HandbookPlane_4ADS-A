@@ -4,6 +4,9 @@ import com.handkbookplane.model.Bloco;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Interface responsável por comunicar com o banco de dados, utilizando funções básicas como:
  * save, delete, update etc
@@ -16,7 +19,8 @@ public interface BlocoRepository extends CrudRepository<Bloco, String>
 
 {
     //Procura Bloco por nome
-    Iterable<Bloco> findByNomeBloco(String nomeBloco);
+
+    ArrayList<Bloco> findByNomeBloco(String nomeBloco);
 
     //Procura Bloco por Id
     Bloco findByIdBloco(Integer idBloco);

@@ -15,7 +15,7 @@ public class BlocoControllerModel implements Serializable {
     private Integer code;
     private Integer revisao;
     private String dataRev;
-    private String remark;
+    private String descRevisao;
 
     public Integer getIdBloco() {
         return idBloco;
@@ -81,11 +81,11 @@ public class BlocoControllerModel implements Serializable {
         this.dataRev = dataRev;
     }
 
-    public String getRemark() {
-        return remark;
+    public String getDescRevisao() {
+        return descRevisao;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setDescRevisao(String descRevisao) {
+        this.descRevisao = descRevisao;
     }
 }

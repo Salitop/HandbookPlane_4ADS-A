@@ -1,14 +1,19 @@
 package com.handkbookplane.controller;
 
 import com.handkbookplane.model.Administrador;
+import com.handkbookplane.model.Bloco;
 import com.handkbookplane.model.Usuario;
 import com.handkbookplane.repository.AdministradorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.SystemPropertyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Classe responsável por controlar as funções do sistema
@@ -45,6 +50,7 @@ public class AdministradorController {
      * @param administrador
      * @return ModelAndView
      */
+/*
     @PostMapping(value = "/cadastrarAdministrador")
     public ModelAndView cadastraAdministrador(Administrador administrador) {
         ModelAndView modelAndView = new ModelAndView();
@@ -68,15 +74,39 @@ public class AdministradorController {
         modelAndView.setViewName("/administrador/cadastrarAdministrador");
         return modelAndView;
     }
-
+*/
     @GetMapping(value = "/listarAdministrador")
-    public ModelAndView telaListaAdministradores() {
+    public ModelAndView telaListaAdministradores(String nome) {
 
         ModelAndView modelAndView = new ModelAndView("/administrador/listaAdministrador");
         modelAndView.addObject("admin", administradorRepository.findAll());
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
         modelAndView.addObject("administrador", administrador);
+        System.out.println(nome);
+        if (nome != null) {
+            System.out.println(nome);
+            ArrayList<Administrador> admin = administradorRepository.findByNome(nome);
 
+            if (admin.size() != 0) {
+
+                List<Administrador> adminTotais = new ArrayList<>();
+
+                for (Administrador admins : admin) {
+
+
+                    adminTotais.add(admins);
+                }
+
+                modelAndView.addObject("admin", adminTotais);
+
+                return modelAndView;
+            }
+            Iterable<Administrador> admins = administradorRepository.findAll();
+            modelAndView.addObject("admin", admins);
+            return modelAndView;
+        }
+        Iterable<Administrador> admins = administradorRepository.findAll();
+        modelAndView.addObject("admin", admins);
         return modelAndView;
     }
 

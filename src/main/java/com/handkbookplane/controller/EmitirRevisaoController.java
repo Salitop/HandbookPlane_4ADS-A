@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 /**
  * Classe responsável por controlar as funções do sistema
@@ -60,30 +60,37 @@ public class EmitirRevisaoController {
     }
 //PÁGINA PARA CADASTRAR A REVISÃO
 
-    @GetMapping(value = "/revisaoBloco/{idBloco}/{nomeBloco}")
-    public ModelAndView telarevisaoBloco(Integer idBLoco, String nomeBloco) {
+    @GetMapping(value = "/revisaoBloco/{idBloco}")
+    public ModelAndView telarevisaoBloco(Integer idBloco) {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
 
         ModelAndView mv = new ModelAndView("/bloco/revisaoBloco");
 
-        Bloco bloco = blocoRepository.findByIdBloco(idBLoco);
+        Bloco bloco = blocoRepository.findByIdBloco(idBloco);
 
-        Iterable<Bloco> blocoCode = blocoRepository.findByNomeBloco(nomeBloco);
-
-        mv.addObject("blocoCode", blocoCode);
         mv.addObject("bloco", bloco);
 
         mv.addObject("administrador", administrador);
         return mv;
     }
 
-    @PostMapping(value = "/revisaoBloco/{idBloco}/{nomeBloco}")
-    public ModelAndView cadRevisao(Bloco bloco) {
-        //Cadastrar revisão
-        ModelAndView mv = new ModelAndView("/bloco/revisaoBloco");
-        return mv;
+    @PostMapping(value = "/revisaoBloco/{idBloco}")
+    public ModelAndView cadRevisao(Bloco bloco, Integer idBloco) {
+
+        Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
+
+        ModelAndView modelAndView = new ModelAndView();
+        Bloco blocoAlterado = blocoRepository.findByIdBloco(idBloco);
+        blocoAlterado.setDescRevisao(bloco.getDescRevisao());
+        LocalDateTime date = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String dateFormatado = date.format(formatter);
+        blocoAlterado.setDataRev(dateFormatado);
+        modelAndView.addObject("bloco", blocoRepository.save(blocoAlterado));
+        modelAndView.setViewName("/bloco/revisaoBloco");
+
+        modelAndView.addObject("administrador", administrador);
+
+        return modelAndView;
     }
-
-
-
 }

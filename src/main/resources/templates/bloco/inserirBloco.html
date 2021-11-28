@@ -29,8 +29,12 @@
 	                       th:attr="name='admin'" id="admin"/>
 	                <div class="div-1">
 					<h3 class="tag-0">Nome Bloco:</h3>
-	                <input class="input-forms-1" type='text' placeholder="Nome Bloco"
+	                <input class="input-forms-1" type='text' placeholder="XX-YY-ZZ"
 	                       name="nomeBloco" id="nome" required/>
+						<div class="tooltip">
+							<img class="icon-info" src="/imagens/icon-info.svg">
+							<span>Ex: O campo "Nome" deve ser na sequência: Seção + Subseção + N° Bloco</span>
+						</div>
 
 	                <h3 class="tag-3">N° do Bloco:</h3>
 	                <input class="input-forms-4" type='text' placeholder="N° do Bloco"
@@ -54,15 +58,15 @@
 	                <input class="input-forms-6" type='text' placeholder="Revisão"
 	                       name="revisao" id="nome" required/>
 
-					<h3 class="tag-7">Remarks:</h3> <!--Criar a tag-7 e ...forms-8 para ficar na esquerda do container-->
-					<input class="input-forms-8" type='text' placeholder="Remarks"
-						   name="remark" id="nome" required/>
-
 	                <h3 class="tag-6">Inserir Documento  (PDF):</h3> <!--Dar um melhor espaçamento para aparecer o nome do documento guardado no input-->
 	                <input class="input-forms-7" type='file' placeholder=""
 	                       name="PDF" id="nome"/>
 
 	                <input class="btn-salvar"type="submit" value="Salvar">
+
+					<div>
+						<a th:href="@{/inserirBlocoCSV/}"><input class="btn-vizualizar" type="button" value="Inserir por CSV"></a>
+					</div>
                 </div>
             </div>
 

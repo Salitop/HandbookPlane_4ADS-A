@@ -20,8 +20,6 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-
-
 public class Bloco {
 
     private String nomeBloco;
@@ -32,10 +30,9 @@ public class Bloco {
     private Integer code;
     private Integer revisao;
     private String dataRev;
-    private String remark;
     private byte[] PDF;
     private String PDF_string;
-
+    private String descRevisao;
 
     /**
      * Gerando campos do Bloco
@@ -108,14 +105,6 @@ public class Bloco {
         this.dataRev = dataRev;
     }
 
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
     public byte[] getPDF() {
         return PDF;
     }
@@ -132,12 +121,11 @@ public class Bloco {
         this.PDF_string = PDF_string;
     }
 
+    public String getDescRevisao() {
+        return descRevisao;
+    }
 
-
-     /**
-     * Gerando construtor do administrador
-     */
-
-
-
+    public void setDescRevisao(String descRevisao) {
+        this.descRevisao = descRevisao;
+    }
 }
