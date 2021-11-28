@@ -21,46 +21,44 @@
 <body id= "body"class="body">
 <div class="main_cadastro">
     <h1 class="titulo-cadastro">Listar Traço</h1>
-    <form method='post'>
         <div class="row about-container">
             <div class="col-lg-6">
                 <div class="div-container">
-                    <input type="hidden" th:value="${admin}"
-                           th:attr="name='admin'" id="admin"/>
-                    <div class="div-1">
+                    <form method='get'>
                         <h3 class="tag-0">Pesquisar:</h3>
-                        <input class="input-forms-1" type='text' placeholder="Ex: Bloco, Code"
-                               name="nome" id="nome" required/>
-                        <a href="/(EventoPesquisar)"><img class="imagem-pesquisar" src="/imagens/lupaPesquisa.png"></a>
-                    </div>
-                    <div class="div-2">
-                        <table>
-                            <tr >
-                                <th class="color-th">Selecionar</th>
-                                <th class="color-th">Traço</th>
-                            </tr>
-                            <tr >
-                                <td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
-                                <td class="td-color-1">linha</td>
-                            </tr>
-                            <tr >
-                                <td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
-                                <td class="td-color-1">linha</td>
-                            </tr>
-                            <tr >
-                                <td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
-                                <td class="td-color-1">linha</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <a href="listaDeTracos"><input class="btn-salvar"type="button" value="Visualizar/Comparar"></a>
-                    <p class="p-atenttion">Atenção: Escolher apenas 2 Traços parar comparar ou apenas 1 para Visualizar</p>
+                        <input class="input-forms-1" type='text' placeholder="Buscar por nome do traço"
+                               name="nome" id="nome"/>
+                        <input class = "btn-salvar" type = "submit" value="Pesquisar">
+                    </form>
+                    <form method='post'>
+                        <input type="hidden" th:value="${traco}"
+                               th:attr="name='traco'" id="traco"/>
+                        <div class="div-1"> </div>
+                        <div class="div-2">
+                            <table>
+                                <tr >
+                                    <th class="color-th">Selecionar</th>
+                                    <th class="color-th">Traço</th>
+                                    <th class="color-th">Remark</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="traco : ${traco}">
+
+                                    <td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="idTraco" th:value="${traco.idTraco}"></td>
+                                    <td class="td-color-1" th:text="${traco.nomeTraco}"></td>
+                                    <td class="td-color-1" th:text="${traco.remark}"></td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <input class = "btn-pesquisar" type = "submit" value="Visualizar/Comparar">
+                    </form>
                 </div>
             </div>
         </div>
-    </form>
-</div>
-</div>
+    </div>
 <script>
 const inputID = document.getElementById('admin');
 const id = inputID.value;

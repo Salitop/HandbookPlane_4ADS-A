@@ -95,12 +95,22 @@ input{
 }
 
 .btn-salvar{
-    margin-left:45%;
+    margin-left:2%;
 	width:20%;
 	height:10%;
 	background-color: #20BAF0;
 	color:white;
 	cursor: pointer;
+}
+
+.btn-pesquisar{
+    margin-left: -30%;
+    margin-top: 30%;
+    width: 20%;
+    height: 10%;
+    background-color: #20BAF0;
+    color: white;
+    cursor: pointer;
 }
 
 .btn-salvar:hover{
