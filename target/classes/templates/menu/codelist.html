@@ -48,14 +48,14 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr th:each="bloco : ${bloco}">
+                            <tr th:each="codelist : ${codelist}">
 
-                                <td class="td-color-1" th:text="${bloco.secao}"></td>
-                                <td class="td-color-1" th:text="${bloco.subsecao}"></td>
-                                <td class="td-color-1" th:text="${bloco.nbloco}"></td>
-                                <td class="td-color-1" th:text="${bloco.nomeBloco}"> </td>
-                                <td class="td-color-1" th:text="${bloco.code}"></td>
-                                <td class="td-color-1" th:text="${bloco.code}"></td>
+                                <td class="td-color-1" th:text="${codelist.secao}"></td>
+                                <td class="td-color-1" th:text="${codelist.subsecao}"></td>
+                                <td class="td-color-1" th:text="${codelist.nbloco}"></td>
+                                <td class="td-color-1" th:text="${codelist.apelidoBloco}"> </td>
+                                <td class="td-color-1" th:text="${codelist.code}"></td>
+                                <td class="td-color-1" th:text="${codelist.remark}"></td>
                                 <td class="td-button"><a href=""><input class="btn-vizualizar2" type="button" value="Deletar"></td>
                             </tr>
                             </tbody>

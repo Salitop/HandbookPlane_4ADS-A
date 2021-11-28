@@ -2,9 +2,11 @@ package com.handkbookplane.controller;
 
 import com.handkbookplane.model.Administrador;
 import com.handkbookplane.model.Bloco;
+import com.handkbookplane.model.Codelist;
 import com.handkbookplane.model.Usuario;
 import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.BlocoRepository;
+import com.handkbookplane.repository.CodelistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +27,8 @@ public class CodelistController {
     @Autowired
     BlocoRepository blocoRepository;
     @Autowired
+    CodelistRepository codelistRepository;
+    @Autowired
     AdministradorRepository administradorRepository;
     /**
      * Método responsável por dar um get na tela menu Traço
@@ -38,16 +42,16 @@ public class CodelistController {
 
         ModelAndView mv = new ModelAndView("/menu/codelist");
 
+       if()
+        Iterable<Codelist> codelist = codelistRepository.findAll();
 
-        Iterable<Bloco> bloco = blocoRepository.findAll();
+        List<Codelist> codelistTotais = new ArrayList<>();
 
-        List<Bloco> blocosTotais = new ArrayList<>();
-
-        for (Bloco blocos : bloco) {
-            blocosTotais.add(blocos);
+        for (Codelist codelists : codelist) {
+            codelistTotais.add(codelists);
         }
 
-        mv.addObject("bloco", blocosTotais);
+        mv.addObject("codelist", codelistTotais);
 
 
         mv.addObject("administrador", administrador);

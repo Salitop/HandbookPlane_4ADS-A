@@ -1,8 +1,11 @@
 package com.handkbookplane.repository;
 
+import com.handkbookplane.model.Bloco;
 import com.handkbookplane.model.Codelist;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
 
 /**
  * Interface responsável por comunicar com o banco de dados, utilizando funções básicas como:
@@ -16,6 +19,6 @@ public interface CodelistRepository extends CrudRepository<Codelist, String>
 
 {
     //Procura Codelist pelo nome do bloco
-    Iterable<Codelist> findByApelidoBloco(String apelidoBloco);
+    ArrayList<Codelist> findByApelidoBloco(String apelidoBloco);
 
 }
