@@ -119,6 +119,8 @@ public class InserirBlocoController {
         String dataRev = metadata[6];
         String remark = metadata[7];
 
+        byte[] bytes = new byte[4];
+
         Bloco bloco = new Bloco();
         bloco.setNomeBloco(nomeBloco);
         bloco.setSecao(secao);
@@ -127,6 +129,7 @@ public class InserirBlocoController {
         bloco.setCode(Integer.parseInt(code));
         bloco.setRevisao(Integer.parseInt(revisao));
         bloco.setDataRev(dataRev);
+        bloco.setPDF(bytes);
 
         return bloco;
     }
