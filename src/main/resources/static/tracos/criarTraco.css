@@ -96,11 +96,13 @@ input{
 }
 
 .btn-salvar{
-	width:10%;
-	height:10%;
-	background-color: #20BAF0;
-	color:white;
-	cursor: pointer;
+    width: 10%;
+    height: 10%;
+    background-color: #20BAF0;
+    color: white;
+    cursor: pointer;
+    margin-top: 0;
+
 }
 
 .btn-salvar:hover{
@@ -115,16 +117,24 @@ input{
 }
 
 .tag-1{
-	width:15%;
+	margin-left: -12.5%;
+        width: 15%;
 }
 
 .input-forms-1{
 	width: 50%;
+	margin-left:1%;
 }
 .input-forms-2{
-	width: 50%;
+	margin-top: 3%;
+        width: 50%;
+        margin-left: -1.2%;
 }
-
+.input-forms-3{
+    margin-top: 0%;
+    width: 50%;
+    margin-left: 4.7%;
+}
 
 .div-1{
 	display:flex;
@@ -188,7 +198,7 @@ table, th, td {
 	justify-content: normal;
 }
 .tag-2{
-    width: 9%;
-    margin-left: 16%;
-
+    margin-top: 0.5%;
+        width: 9%;
+        margin-left: -12.5%;
 }
