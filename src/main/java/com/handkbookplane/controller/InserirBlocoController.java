@@ -61,13 +61,6 @@ public class InserirBlocoController {
         return mv;
     }
 
-    /*    @PostMapping(value = "/inserirBloco")
-        public ModelAndView inserirBloco(Bloco bloco) {
-            ModelAndView modelAndView = new ModelAndView();
-            modelAndView.addObject("bloco", BlocoRepository.save(bloco).getIdBloco());
-            modelAndView.setViewName("/bloco/inserirBloco");
-            return modelAndView;
-        }*/
     @RequestMapping(value = "/inserirBloco", method = RequestMethod.POST, consumes = {"multipart/form-data"})
     public String form(BlocoControllerModel bloco, @RequestParam(value = "PDF") MultipartFile PDF)
             throws IOException {
