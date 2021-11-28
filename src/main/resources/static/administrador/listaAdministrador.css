@@ -99,7 +99,11 @@ input{
 	background-color: #20BAF0;
 	color:white;
 	cursor: pointer;
+	 margin-top: 0;
 }
+
+
+
 
 .btn-salvar:hover{
 	transition:0.5s;
