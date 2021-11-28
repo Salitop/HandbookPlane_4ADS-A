@@ -40,6 +40,7 @@
                                     <th class="color-th">Selecionar</th>
                                     <th class="color-th">Traço</th>
                                     <th class="color-th">Remark</th>
+                                    <th class="color-th">Visualizar</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -48,12 +49,13 @@
                                     <td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="idTraco" th:value="${traco.idTraco}"></td>
                                     <td class="td-color-1" th:text="${traco.nomeTraco}"></td>
                                     <td class="td-color-1" th:text="${traco.remark}"></td>
+                                    <td class="td-button"><a th:href="@{/visualizarTracoPDF/{id_traco}(idTraco = ${traco.idTraco})}"><input class="btn-visualizar" type="button" value="Visualizar"></a></td>
                                 </tr>
                                 </tbody>
 
                             </table>
                         </div>
-                        <input class = "btn-pesquisar" type = "submit" value="Visualizar/Comparar">
+
                     </form>
                 </div>
             </div>

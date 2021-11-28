@@ -1,6 +1,7 @@
 package com.handkbookplane.controller;
 
 import com.handkbookplane.model.Administrador;
+import com.handkbookplane.model.Bloco;
 import com.handkbookplane.model.Traco;
 import com.handkbookplane.model.Usuario;
 import com.handkbookplane.repository.AdministradorRepository;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 /**
@@ -66,4 +68,29 @@ public class ListarTracoController {
         return modelAndView;
     }
 
+    @GetMapping(value = "/visualizarTracoPDF/{id_traco}")
+    public ModelAndView telavisualizarBlocoPDF(Integer idTraco) {
+        Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
+
+        if(idTraco != null)
+        {
+            ModelAndView mv = new ModelAndView("/traco/visualizarTracoPDF");
+
+            Traco traco = tracoRepository.findByIdTraco(idTraco);
+
+            String pdf = Base64.getEncoder().encodeToString(traco.getPDF()); //Ta dando pau aqui, se pá é pq ta sem o mapper k
+            traco.setPDF_string(pdf);
+
+            mv.addObject("traco", traco);
+
+            mv.addObject("administrador", administrador);
+            return mv;
+        }
+        else
+        {
+            ModelAndView mv = new ModelAndView("/traco/menuTraco.html");
+            mv.addObject("administrador", administrador);
+            return mv;
+        }
+    }
 }
