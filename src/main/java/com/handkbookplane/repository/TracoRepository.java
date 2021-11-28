@@ -15,7 +15,6 @@ import org.springframework.stereotype.Repository;
 public interface TracoRepository extends CrudRepository<Traco, String>
 
 {
-    //Procura Traço pelo nome do traço
-    Iterable<Traco> findByNomeBloco(String nomeTraco);
+
 
 }

@@ -23,9 +23,8 @@ public class Traco {
 
     @GeneratedValue
     private String nomeTraco;
+    private Integer idBloco;
     private String remark;
-    private String nomeBloco;
-    private Integer codeBloco;
     private byte[] PDF;
     private String PDF_string;
     @Id
@@ -54,22 +53,6 @@ public class Traco {
 
     public void setRemark(String remark) {
         this.remark = remark;
-    }
-
-    public String getNomeBloco() {
-        return nomeBloco;
-    }
-
-    public void setNomeBloco(String nomeBloco) {
-        this.nomeBloco = nomeBloco;
-    }
-
-    public Integer getCodeBloco() {
-        return codeBloco;
-    }
-
-    public void setCodeBloco(Integer codeBloco) {
-        this.codeBloco = codeBloco;
     }
 
     public byte[] getPDF() {

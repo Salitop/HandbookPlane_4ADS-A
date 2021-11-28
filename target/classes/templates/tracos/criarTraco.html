@@ -12,7 +12,7 @@
 <header class="header">
 	<div >
 		<img class="imagem-logo" src="/imagens/logo.svg">
-		<p id="p" class="bemvindo">Bem vindo: <span th:text="${administrador.nome}"></span> </p>
+	<!--	<p id="p" class="bemvindo">Bem vindo: <span th:text="${administrador.nome}"></span> </p> -->
 		<a href="menuTraco"><img class="imagem-sair" src="/imagens/sair.svg"></a>
 		<li><a class="sair"href="/login" title="">Sair</a></li>
 	</div>
@@ -56,7 +56,6 @@
 					<div class="div-2">
 						<table>
 							<th class="color-th">Selecionar</th>
-							<th class="color-th">ID</th>
 							<th class="color-th">Bloco</th>
 							<th class="color-th">Code</th>
 							<th class="color-th">PDF</th>
@@ -64,10 +63,9 @@
 							<tbody>
 
 							<tr th:each="bloco : ${bloco}">
-								<td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="scales"></td>
-								<td class="td-color-1" th:text="${bloco.idBloco}"></td>
-								<td class="td-color-1" th:text="${bloco.nomeBloco}"></td>
-								<td class="td-color-1" th:text="${bloco.code}"></td>
+								<td class="td-color"><input class="checkbox" type="checkbox" id="scales" name="idBloco" th:value="${bloco.idBloco}"></td>
+								<td name="nomeBloco" class="td-color-1" th:text="${bloco.nomeBloco}"></td>
+								<td name="code" class="td-color-1" th:text="${bloco.code}"></td>
 								<td class="td-button"><a th:href="@{/visualizarBlocoPDF/{id_bloco}(idBloco = ${bloco.idBloco})}"><input class="btn-vizualizar" type="button" value="Pesquisar"></a></td>
 							</tr>
 							</tbody>
