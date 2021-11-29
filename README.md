@@ -24,23 +24,32 @@ Feito por Luiz Miguel
 
 Front-end Daniel Vargas e Back-end Kevin Gabriel
 
-# Gerar Codelist
+# Exibindo Codelist
 
+![gerar-traco](https://media2.giphy.com/media/TptiE2q4LXzpt8aTPf/giphy.gif?cid=790b76113211abe1dd1ce8d68f5a488f0d17c5078050aa9f&rid=giphy.gif&ct=g)
 
-Front-end Daniel Vargas e Back-end Luiz Miguel
+Front-end Daniel Vargas e Back-end Luiz Miguel e Edryan Matheus
+
+# Apagando Codelist
+
+![gerar-traco](https://media2.giphy.com/media/TptiE2q4LXzpt8aTPf/giphy.gif?cid=790b76113211abe1dd1ce8d68f5a488f0d17c5078050aa9f&rid=giphy.gif&ct=g)
+
+Front-end Daniel Vargas e Back-end Luiz Miguel e Edryan Matheus
 
 # Cadastro Traços
 
+![gerar-traco](https://giphy.com/gifs/I2WaEzFx2wHC9HlkH4)
 
 Front-end Daniel Vargas e Back-end Luiz Miguel 
 
-# Eventos de Pesquisa
+# Listando e Visualizando Traço
 
+![listar-e-ver-traco](https://media4.giphy.com/media/GgrYOQZTyTLV8k8B9E/giphy.gif)
 
-Front-end Daniel Vargas e Back-end Edryan Matheus
-
+Front-end Daniel Vargas e Back-end Luiz Miguel e Edryan Matheus
 
 # Burndown
+![burndown-sprint3](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-4/Doc/Burndown/BURNDOWN_SPRINT_4.png)
 
 Feito por Edryan Matheus
 
