@@ -57,5 +57,7 @@ Feito por Daniel Vargas e Kevin Melo
 | ------ | ------ |
 |    19/09/2021    |[Sprint 1](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-1)|
 |    10/10/2021    |[Sprint 2](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-2)|
+|    30/11/2021    |[Sprint 3](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-3)|
+|    28/12/2021    |[Sprint 4](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-4)|
 
 Documentação Readme Feito por Daniel Vargas
