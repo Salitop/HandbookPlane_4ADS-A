@@ -15,7 +15,7 @@ Feito por Daniel Vargas E Luiz Miguel
 
 ## PowerPoint da Sprint
 Clique <a href='https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-3/Doc/Apresentação/ApresentacaoSprint3-HBP.pptx'> aqui </a>
-para baixar o PowerPoint da apresentação da Sprint 3.
+para baixar o PowerPoint da apresentação da Sprint 4.
 
 Feito por Luiz Miguel
 
