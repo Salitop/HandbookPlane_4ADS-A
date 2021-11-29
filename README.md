@@ -38,7 +38,7 @@ Front-end Daniel Vargas e Back-end Luiz Miguel e Edryan Matheus
 
 # Cadastro Traços
 
-![gerar-traco](https://giphy.com/gifs/I2WaEzFx2wHC9HlkH4)
+![gerar-traco](https://media3.giphy.com/media/I2WaEzFx2wHC9HlkH4/giphy.gif?cid=790b761119f605b95b1ed4de8c07d8757dbf7b297317403d&rid=giphy.gif&ct=g)
 
 Front-end Daniel Vargas e Back-end Luiz Miguel 
 
