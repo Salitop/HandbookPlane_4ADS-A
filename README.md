@@ -26,7 +26,7 @@ Front-end Daniel Vargas e Back-end Kevin Gabriel
 
 # Exibindo Codelist
 
-![gerar-traco](https://media2.giphy.com/media/TptiE2q4LXzpt8aTPf/giphy.gif?cid=790b76113211abe1dd1ce8d68f5a488f0d17c5078050aa9f&rid=giphy.gif&ct=g)
+![gerar-traco](https://media4.giphy.com/media/SESNnEzgsxI1ReLe0Q/giphy.gif)
 
 Front-end Daniel Vargas e Back-end Luiz Miguel e Edryan Matheus
 
