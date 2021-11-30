@@ -296,3 +296,214 @@ div:hover.tooltip span {
 width:20px;
 height:20px;
 }
+
+@media (min-width: 1920px){
+.header {
+    height: 101px;
+    background: #0C3756;
+}
+.imagem-logo {
+     margin-top: 10px;
+     margin-left: 70px;
+     height: 10%;
+     width: 6%;
+     float: left;
+ }
+.bemvindo {
+  font-size: 31px;
+  padding-top: 1.5%;
+  margin-left: 33%;
+  color: white;
+  float: left;
+}
+.sair {
+    margin-top: -2.5%;
+    font-size: 31px;
+    padding-top: 0.5%;
+    margin-left: 28%;
+    color: white;
+    float: left;
+}
+.menu-inicial {
+   margin-left: 10%;
+   font-size: 75px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+}
+.div-container {
+    padding-top: 5%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    background-color: #f0f0f0;
+    margin-left: 15%;
+    max-width: 1500px;
+    height: 700px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 25%);
+}
+.imagem-sair {
+    margin-top: 29px;
+    margin-left: 22%;
+    height: 3%;
+    width: 3%;
+    float: left;
+}
+.titulo-cadastro {
+    margin-left: 10%;
+    font-size: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.tag-0 {
+    font-size: 28px;
+    margin-left: 10%!important;
+    float: left;
+}
+.input-forms-1 {
+    float: left!important;
+    width: 17%;
+    height: 60%;
+    margin-top: 2.5%;
+}
+.icon-info {
+    width: 32px;
+    height: 32px;
+}
+.tooltip {
+    margin-left: 7px;
+    margin-top: 41px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    float: left;
+}
+div.tooltip span {
+    position: absolute;
+    text-align: center;
+    visibility: hidden;
+    background-color: #000;
+    color: #FFF;
+    padding: 5px 10px;
+    width: 300px;
+    height: 120px;
+    font-size: 28px;
+}
+.tag-3 {
+    font-size: 28px;
+    width: 12%;
+    margin-left: 10.5%!important;
+    float: left;
+}
+.input-forms-4 {
+    margin-top: 33px;
+    margin-left: 1%;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 10%;
+    height: 60%;
+    border-radius: 5px;
+}
+.tag-1 {
+    font-size: 28px;
+    margin-top: 2.5%;
+    margin-left: -54%!important;
+    float: left!important;
+}
+.input-forms-2 {
+    margin-top: 2.5%;
+    float: left;
+    margin-left: -42.6%!important;
+    margin-left: 5%;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 10%;
+    height: 4.5%;
+    border-radius: 5px;
+}
+.tag-4 {
+    font-size: 28px;
+    margin-top: 2.5%;
+    margin-left: -6.4%!important;
+    float: left!important;
+}
+.input-forms-5 {
+    margin-top: 2.5%;
+    float: left;
+    margin-left: 0.8%!important;
+    margin-left: 5%;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 10%;
+    height: 4.5%;
+    border-radius: 5px;
+}
+.tag-2 {
+    font-size: 28px;
+    width: 12%;
+    margin-left: -70%!important;
+    float: left;
+    margin-top: 7%;
+}
+.input-forms-3 {
+    float: left;
+    margin-left: -53.9%!important;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 10%;
+    height: 4.5%;
+    border-radius: 5px;
+    margin-top: 6.5%;
+}
+.tag-5 {
+    font-size: 28px;
+    width: 12%;
+    margin-left: -20%!important;
+    float: left;
+    margin-top: 7%;
+}
+.input-forms-6 {
+    float: left;
+    margin-left: -10.7%!important;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 10%;
+    height: 4.5%;
+    border-radius: 5px;
+    margin-top: 7.0%;
+}
+.tag-6 {
+    font-size: 28px;
+    width: 26%;
+    margin-left: 22%!important;
+    float: left;
+    margin-top: 9%;
+}
+.input-forms-7 {
+    margin-top: 8.8%!important;
+    float: left;
+    margin-left: -3.7%!important;
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 41%;
+    height: 7.5%;
+    border-radius: 5px;
+}
+.btn-salvar {
+    font-size: 28px;
+    margin-top: 3%;
+    margin-left: 47.5%;
+    width: 10%;
+    height: 10%;
+    background-color: #20BAF0;
+    color: white;
+    cursor: pointer;
+}
+.input-forms-9 {
+    font-size: 28px;
+}
+}
