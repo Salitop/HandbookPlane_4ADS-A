@@ -254,4 +254,51 @@ table, th, td {
     width: 3%;
     float: left;
 }
+
+table {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 75%;
+    height: 140px;
+}
+table,tr,td{
+font-size:28px;
+}
+.titulo-cadastro {
+    margin-left: 10%;
+    font-size: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.btn-salvar {
+    width: 15%;
+    height: 10%;
+    background-color: #20BAF0;
+    color: white;
+    cursor: pointer;
+    margin-top: 0;
+    font-size: 32px;
+}
+.input-forms-1 {
+    font-size: 32px;
+    width: 50%;
+    margin-left: 1%;
+}
+.tag-0 {
+    font-size: 32px;
+    margin-top: 1%;
+    width: 10%;
+    margin-left: 10%!important;
+    float: left!important;
+}
+.btn-vizualizar2 {
+    font-size: 28px;
+    width: 90%;
+    height: 80%;
+    border: none;
+    background-color: #F0202C;
+    color: white;
+    cursor: pointer;
+}
 }

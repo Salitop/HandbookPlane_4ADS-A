@@ -154,4 +154,38 @@ input{
     width: 3%;
     float: left;
 }
+.titulo-cadastro {
+    margin-left: 10%;
+    font-size: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.btn-salvar {
+    margin-top: 3%;
+    margin-left: 47.5%;
+    width: 10%;
+    height: 10%;
+    background-color: #20BAF0;
+    color: white;
+    cursor: pointer;
+}
+input {
+    margin-left: 20%;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 65%;
+    height: 7%;
+    border-radius: 5px;
+    border-color: #ffffff;
+}
+.ultimo-input {
+    float: left;
+}
+h3 {
+    margin-left: 20%;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
 }
