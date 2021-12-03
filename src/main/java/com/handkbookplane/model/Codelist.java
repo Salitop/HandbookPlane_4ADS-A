@@ -20,8 +20,6 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-
-
 public class Codelist {
 
     @GeneratedValue

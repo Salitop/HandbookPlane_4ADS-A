@@ -12,9 +12,7 @@ import org.springframework.stereotype.Repository;
  * @Since: 24/11/2021
  */
 @Repository
-public interface TracoRepository extends CrudRepository<Traco, String>
+public interface TracoRepository extends CrudRepository<Traco, String> {
 
-{
-
-
+    Traco findByNomeTraco(String nomeTraco);
 }
