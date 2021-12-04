@@ -203,4 +203,70 @@ table, th, td {
    height: 12%;
    margin-top: 2%;
    width: 17%;
-   }
+}
+@media (min-width: 1920px){
+.header {
+    height: 101px;
+    background: #0C3756;
+}
+.imagem-logo {
+     margin-top: 10px;
+     margin-left: 70px;
+     height: 10%;
+     width: 6%;
+     float: left;
+ }
+.bemvindo {
+  font-size: 31px;
+  padding-top: 1.5%;
+  margin-left: 33%;
+  color: white;
+  float: left;
+}
+.sair {
+    margin-top: -2.5%;
+    font-size: 31px;
+    padding-top: 0.5%;
+    margin-left: 28%;
+    color: white;
+    float: left;
+}
+.menu-inicial {
+   margin-left: 10%;
+   font-size: 75px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+}
+.div-container {
+    padding-top: 5%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    background-color: #f0f0f0;
+    margin-left: 15%;
+    max-width: 1500px;
+    height: 700px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 25%);
+}
+.imagem-sair {
+    margin-top: 29px;
+    margin-left: 22%;
+    height: 3%;
+    width: 3%;
+    float: left;
+}
+.select-edit {
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 12%;
+    margin-top: 2%;
+    width: 17%;
+}
+.tag-0 {
+    font-size: 28px;
+    width: 20%;
+    margin-left: 10%!important;
+    float: left!important;
+    text-align: center;
+}
+}
