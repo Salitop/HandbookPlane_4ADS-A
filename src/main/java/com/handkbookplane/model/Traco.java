@@ -27,6 +27,7 @@ public class Traco {
     private String remark;
     private byte[] PDF;
     private String PDF_string;
+    private String dataRel;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idTraco;
@@ -45,6 +46,12 @@ public class Traco {
 
     public void setNomeTraco(String nomeTraco) {
         this.nomeTraco = nomeTraco;
+    }
+
+    public String getDataRel() {return dataRel;}
+
+    public void setDataRel(String dataRel) {
+        this.dataRel = dataRel;
     }
 
     public String getRemark() {
