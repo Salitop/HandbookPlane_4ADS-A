@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org" lang="pt-br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Visualizar LEP</title>
+    <title>Listar Administradores</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/administrador/listaAdministrador.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,16 +21,16 @@
 <body id= "body"class="body">
 <div class="main_cadastro">
     <h1 class="titulo-cadastro">Lista de Administradores</h1>
-    <form method='get'>
-        <h3 class="tag-0">Pesquisar:</h3>
-        <input class="input-forms-1" type='text' placeholder="Buscar por nome"
-               name="nome" id="nome"/>
-        <input type = "submit" value="Pesquisar" ><img class="imagem-pesquisar" src="/imagens/lupaPesquisa.png">
-    </form>
-    <form method='post'>
         <div class="row about-container">
             <div class="col-lg-6">
                 <div class="div-container">
+                    <form method='get'>
+                        <h3 class="tag-0">Pesquisar:</h3>
+                        <input class="input-forms-1" type='text' placeholder="Buscar por nome"
+                               name="nome" id="nome"/>
+                        <input class = "btn-salvar" type = "submit" value="Pesquisar">
+                    </form>
+                    <form method='post'>
                     <input type="hidden" th:value="${admin}"
                            th:attr="name='admin'" id="admin"/>
                     <div class="div-1">
@@ -57,10 +57,11 @@
 
                         </table>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </form>
+
 </div>
 </div>
 <script>

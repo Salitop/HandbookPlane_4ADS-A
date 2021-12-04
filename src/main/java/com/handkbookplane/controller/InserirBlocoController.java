@@ -61,13 +61,6 @@ public class InserirBlocoController {
         return mv;
     }
 
-    /*    @PostMapping(value = "/inserirBloco")
-        public ModelAndView inserirBloco(Bloco bloco) {
-            ModelAndView modelAndView = new ModelAndView();
-            modelAndView.addObject("bloco", BlocoRepository.save(bloco).getIdBloco());
-            modelAndView.setViewName("/bloco/inserirBloco");
-            return modelAndView;
-        }*/
     @RequestMapping(value = "/inserirBloco", method = RequestMethod.POST, consumes = {"multipart/form-data"})
     public String form(BlocoControllerModel bloco, @RequestParam(value = "PDF") MultipartFile PDF)
             throws IOException {
@@ -126,6 +119,8 @@ public class InserirBlocoController {
         String dataRev = metadata[6];
         String remark = metadata[7];
 
+        byte[] bytes = new byte[4];
+
         Bloco bloco = new Bloco();
         bloco.setNomeBloco(nomeBloco);
         bloco.setSecao(secao);
@@ -134,6 +129,7 @@ public class InserirBlocoController {
         bloco.setCode(Integer.parseInt(code));
         bloco.setRevisao(Integer.parseInt(revisao));
         bloco.setDataRev(dataRev);
+        bloco.setPDF(bytes);
 
         return bloco;
     }

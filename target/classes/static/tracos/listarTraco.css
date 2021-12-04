@@ -95,12 +95,30 @@ input{
 }
 
 .btn-salvar{
-    margin-left:45%;
+    margin-left:2%;
 	width:20%;
 	height:10%;
 	background-color: #20BAF0;
 	color:white;
 	cursor: pointer;
+}
+
+.btn-pesquisar{
+    margin-left: -30%;
+    margin-top: 30%;
+    width: 20%;
+    height: 10%;
+    background-color: #20BAF0;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-visualizar{
+    width: 100%;
+    height: 10%;
+    background-color: #20BAF0;
+    color: white;
+    cursor: pointer;
 }
 
 .btn-salvar:hover{
@@ -178,6 +196,7 @@ table, th, td {
 
 .td-button{
 	background-color:#bdd7ee;
+	padding: 6px 6px;
 }
 
 .p-atenttion{

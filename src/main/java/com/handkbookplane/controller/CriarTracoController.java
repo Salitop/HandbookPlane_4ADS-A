@@ -9,16 +9,12 @@ import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.BlocoRepository;
 import com.handkbookplane.repository.CodelistRepository;
 import com.handkbookplane.repository.TracoRepository;
-import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.thymeleaf.standard.expression.MessageExpression;
 
-import javax.persistence.Access;
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -98,9 +94,9 @@ public class CriarTracoController {
 
     //Deverá cadastrar tanto Traço quanto Codelist
     @PostMapping(value = "/criarTraco")
-    public ModelAndView criarTraco(Traco traco, Codelist codelist,Integer idBloco) {
+    public Object criarTraco(Traco traco, Codelist codelist, Integer idBloco) {
         if(idBloco != null) {
-            ModelAndView mv = new ModelAndView("/tracos/criarTraco");
+            ModelAndView mv = new ModelAndView("redirect:/menuTraco");
             //Puxando informações do bloco
             Bloco bloco = blocoRepository.findByIdBloco(idBloco);
             //Salvando PDF do bloco no Traço
@@ -119,7 +115,7 @@ public class CriarTracoController {
             return mv;
         }
         else{
-            ModelAndView mv = new ModelAndView("/tracos/criarTraco");
+            ModelAndView mv = new ModelAndView("redirect:/menuTraco");
             return mv;
         }
     }
