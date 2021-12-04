@@ -30,12 +30,15 @@
 	                       
 	                 <img class="img-1" src="/imagens/perfil.svg">
 	                 <a href="/" class="tit-1">Alterar senha</a>
-	                 
-	                 <a class="tit-2">Nome Completo: <span th:text="${administrador.nome}"></span></a>
-	                 
-	                 <a class="tit-3">Nome de Usuário: <span th:text="${administrador.login}"></span></a>
-	                 
-	                 <a class="tit-4">Número de Matrícula: <span th:text="${administrador.matricula}"></span></a>
+	                 <div class="div-1">
+						 <a class="tit-2">Nome Completo: <span th:text="${administrador.nome}"></span></a>
+					 </div>
+					<div class="div-2">
+						<a class="tit-3">Nome de Usuário: <span th:text="${administrador.login}"></span></a>
+					</div>
+	                 <div class="div-2">
+						<a class="tit-4">Número de Matrícula: <span th:text="${administrador.matricula}"></span></a>
+					 </div>
                 </div>
             </div>
         </div>
