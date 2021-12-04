@@ -39,7 +39,7 @@ li {
 }
 
 a{
-margin-top:0.5%;
+    margin-top:0.5%;
 	text-decoration: none;
 }
 
@@ -142,6 +142,7 @@ input{
 }
 
 table {
+margin-left:-10%;
 	float:left;
   width: 50%;
 }
@@ -150,14 +151,13 @@ table, th, td {
 	border: 1px solid black;
   	border-collapse: collapse;
 }
-
-.btn-vizualizar{
-	width:90%;
-	height:80%;
-	border:none;
-	background-color: #20BAF0;
-	color:white;
-	cursor: pointer;
+.btn-vizualizar {
+    width: 90%;
+    height: 80%;
+    border: none;
+    background-color: #20BAF0;
+    color: white;
+    cursor: pointer;
 }
 
 .checkbox{
@@ -179,4 +179,102 @@ table, th, td {
 
 .td-button{
 	background-color:#bdd7ee;
+}
+
+
+@media (min-width: 1920px){
+.header {
+    height: 101px;
+    background: #0C3756;
+}
+.imagem-logo {
+     margin-top: 10px;
+     margin-left: 70px;
+     height: 10%;
+     width: 6%;
+     float: left;
+ }
+.bemvindo {
+  font-size: 31px;
+  padding-top: 1.5%;
+  margin-left: 33%;
+  color: white;
+  float: left;
+}
+.sair {
+    margin-top: -2.5%;
+    font-size: 31px;
+    padding-top: 0.5%;
+    margin-left: 28%;
+    color: white;
+    float: left;
+}
+.menu-inicial {
+   margin-left: 10%;
+   font-size: 75px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+}
+.div-container {
+    padding-top: 5%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    background-color: #f0f0f0;
+    margin-left: 15%;
+    max-width: 1500px;
+    height: 700px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 25%);
+}
+.imagem-sair {
+    margin-top: 29px;
+    margin-left: 22%;
+    height: 3%;
+    width: 3%;
+    float: left;
+}
+table {
+    margin-left: 6%;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 60%;
+    height: 40%;
+}
+table,tr,td{
+font-size:28px;
+}
+.tag-0 {
+    width: 10%;
+    margin-left: 10%!important;
+    float: left!important;
+    font-size: 32px;
+}
+.input-forms-1 {
+    font-size: 28px;
+    margin-left: 5%;
+    width: 50%;
+    margin-top: 2.5%;
+    height: 28px;
+}
+.titulo-cadastro {
+    margin-left: 10%;
+    font-size: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.div-2 {
+    margin-top: 5%;
+    width: 90%;
+    height: 40%;
+    margin-left: 18%;
+}
+.btn-vizualizar {
+    width: 90%;
+    height: 80%;
+    border: none;
+    background-color: #20BAF0;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+}
 }
