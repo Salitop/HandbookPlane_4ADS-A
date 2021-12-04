@@ -17,8 +17,6 @@ public interface CodelistRepository extends CrudRepository<Codelist, String>
 {
     //Procura Codelist pelo nome do bloco
     Iterable<Codelist> findByApelidoBloco(String apelidoBloco);
-
     //Procura todos os blocos pelo seu nome
     Codelist findAllByApelidoBloco(String apelidoBloco);
-
 }
