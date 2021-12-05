@@ -22,4 +22,6 @@ public interface TracoRepository extends CrudRepository<Traco, String>
 
     Traco findByIdTraco(Integer idTraco);
 
+    Traco findAllByNomeTraco(String nomeTraco);
+
 }
