@@ -1,63 +1,30 @@
-## Time
-
-Daniel Vargas Ribeiro (Scrum Master)
-([Linkedin](https://www.linkedin.com/in/daniel-vargas-8b806a184/),
-[Github](https://github.com/DanVargaa))
-
-Edryan Matheus dos Santos Maciel (Dev Team)
-([Linkedin](https://www.linkedin.com/in/edryan-maciel-43538b198/),
-[Github](https://github.com/edryan25))
-
-Kevin Gabriel Alves de Melo (Dev Team)
-([Linkedin](https://www.linkedin.com/in/kevin-melo-1004/),
-[Github](https://github.com/kevingabrielmelo))
-
-Luiz Miguel Macedo Andre (Product Owner)
-([Linkedin](https://www.linkedin.com/in/luiz-miguel-475347193/),
-[Github](https://github.com/Salitop))
-
-
 ## Planejamento das Sprints
 No <a href='https://trello.com/b/n0Ky9r1p/api-4sem'> Trello </a>
 está a disponibilização do planejamento das sprints do projeto.
 
-## Índice
-* [O que é o HandBookPlane](#projeto)
-* [Card das Sprints](#cards-das-sprints)
-* [Product Backlog](#lista-de-requisitos)
-* [Cronograma de Entregas](#entregas)
+## Repertório das Telas
+No <a href='https://www.figma.com/file/KNN1fCOdvzGhXHruUsJOYl/HandBookPlane?node-id=0%3A1'> Figma </a>
+está a disponibilização da prototipação das telas implementadas.
 
-## Projeto
+Feito por Daniel Vargas E Luiz Miguel
 
-O projeto HandbookPlane consiste em uma API desenvolvida usando Java 11 será um website desenvolvido utilizando HTML, CSS e JavaScript com rede local. Com essas ferramentas desenvolveremos um sistema, para realizar a documentação de aéronaves de forma mais fácil e organizada com intuito de agilizar o serviço de nossos clientes.
+# LEP
 
-## Cards das Sprints
-  
-![card1](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_1.png) ![card_2](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_2.png)
+![lep-pt1](https://media4.giphy.com/media/xq4wNj6ADwktwOjujX/giphy.gif)
 
-![card_3](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_3.png) ![card_4](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Cards/Card_4.png)
+![lep-pt2](https://media2.giphy.com/media/zF2x8716pRGVDa4CFS/giphy.gif?cid=790b7611d55ec7c6f9eded01ae109a8fc0874eb35ef68138&rid=giphy.gif&ct=g)
 
+Front-end Daniel Vargas e Back-end Luiz Miguel e Edryan Matheus
 
-Feito por Kevin Melo
+# Relatório dos Traços
 
-# Lista de Requisitos
-![requisitos1](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Requisitos/Requisitos_funcionais.png)
+![rel-traco](https://media2.giphy.com/media/W74kLAGBPJSmrYPpUT/giphy.gif?cid=790b76111aee2a54b446e0a6283135a4eee79e7cf6c0f5f5&rid=giphy.gif&ct=g)
 
-Feito por Daniel Vargas e Kevin Melo
+Front-end Daniel Vargas e Back-end Luiz Miguel e Edryan Matheus
 
-![requisitos2](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/Sprint-1/Doc/Requisitos/Requisitos_n%C3%A3o_funcionais.png)
+# Burndown
+![burndown-sprint5](https://github.com/Salitop/HandbookPlane_4ADS-A/blob/master/Doc/Burndown/burndown5.png)
 
-Feito por Daniel Vargas e Kevin Melo
-
-
-## Entregas
-
-
-| Data | Links |
-| ------ | ------ |
-|    19/09/2021    |[Sprint 1](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-1)|
-|    10/10/2021    |[Sprint 2](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-2)|
-|    30/11/2021    |[Sprint 3](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-3)|
-|    28/12/2021    |[Sprint 4](https://github.com/Salitop/HandbookPlane_4ADS-A/tree/Sprint-4)|
+Feito por Edryan Matheus
 
 Documentação Readme Feito por Daniel Vargas
