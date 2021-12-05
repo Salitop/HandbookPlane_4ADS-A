@@ -49,7 +49,7 @@
                             <tbody>
                             <tr th:each="bloco : ${bloco}">
                                 <td class="td-color-1" th:text="${bloco.nomeBloco}"> </td>
-                                <td class="td-color-1" value = "Sem revisão" th:text="${bloco.dataRev}"></td>
+                                <td class="td-color-1" th:text="${bloco.dataRev}"></td>
                                 <td class="td-color-1" th:text="${bloco.code}"></td>
                                 <td class="td-button"><a th:href="@{/revisaoBloco/{id_bloco}(idBloco = ${bloco.idBloco})}"><input class="btn-vizualizar" type="button" value="Selecionar"></a></td>
                             </tr>

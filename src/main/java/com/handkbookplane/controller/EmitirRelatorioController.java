@@ -8,6 +8,7 @@ import com.handkbookplane.repository.TracoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -63,6 +64,6 @@ public class EmitirRelatorioController {
         Iterable<Traco> tracos = tracoRepository.findAll();
         mv.addObject("traco", tracos);
         return mv;
-
     }
+
 }
