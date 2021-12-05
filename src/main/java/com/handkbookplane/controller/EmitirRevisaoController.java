@@ -3,8 +3,10 @@ package com.handkbookplane.controller;
 import com.handkbookplane.model.Administrador;
 import com.handkbookplane.model.Bloco;
 import com.handkbookplane.model.Usuario;
+import com.handkbookplane.model.LEP;
 import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.BlocoRepository;
+import com.handkbookplane.repository.LepRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +31,9 @@ public class EmitirRevisaoController {
 
     @Autowired
     BlocoRepository blocoRepository;
+
+    @Autowired
+    LepRepository lepRepository;
 
     /**
      * Método responsável por dar um get na tela menu Traço
@@ -75,10 +80,11 @@ public class EmitirRevisaoController {
     }
 
     @PostMapping(value = "/revisaoBloco/{idBloco}")
-    public ModelAndView cadRevisao(Bloco bloco, Integer idBloco) {
+    public ModelAndView cadRevisao(Bloco bloco,LEP lep, Integer idBloco, Integer acao) {
 
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
 
+        //Cadastrando a revisão
         ModelAndView modelAndView = new ModelAndView();
         Bloco blocoAlterado = blocoRepository.findByIdBloco(idBloco);
         blocoAlterado.setDescRevisao(bloco.getDescRevisao());
@@ -87,6 +93,31 @@ public class EmitirRevisaoController {
         String dateFormatado = date.format(formatter);
         blocoAlterado.setDataRev(dateFormatado);
         modelAndView.addObject("bloco", blocoRepository.save(blocoAlterado));
+
+        lep.setIdBloco(blocoAlterado.getIdBloco());
+        lep.setNbloco(blocoAlterado.getNbloco());
+        lep.setNomeBloco(blocoAlterado.getNomeBloco());
+
+        //Cadastrando na LEP
+        if(acao == 1)
+        {
+            lep.setAcao("* new"); // Adicionar
+        }
+        else
+        {
+           if (acao == 2)
+           {
+             lep.setAcao("*"); // Editar
+           }
+           else
+           {
+                lep.setAcao("* del"); // Deletar
+           }
+        }
+        modelAndView.addObject("lep", lepRepository.save(lep));
+
+
+
         modelAndView.setViewName("/bloco/revisaoBloco");
 
         modelAndView.addObject("administrador", administrador);
