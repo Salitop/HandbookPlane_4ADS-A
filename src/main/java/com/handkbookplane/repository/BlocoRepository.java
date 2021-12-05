@@ -19,7 +19,6 @@ public interface BlocoRepository extends CrudRepository<Bloco, String>
 
 {
     //Procura Bloco por nome
-
     ArrayList<Bloco> findByNomeBloco(String nomeBloco);
 
     //Procura Bloco por Id

@@ -21,55 +21,44 @@
 <body id= "body"class="body">
 <div class="main_cadastro">
     <h1 class="titulo-cadastro">Visualizar LEP</h1>
-    <form method='post'>
+
         <div class="row about-container">
             <div class="col-lg-6">
                 <div class="div-container">
-                    <input type="hidden" th:value="${admin}"
-                           th:attr="name='admin'" id="admin"/>
-                    <div class="div-1">
-                        <h3 class="tag-0">Pesquisar:</h3>
-                        <input class="input-forms-1" type='text' placeholder="Ex: Documento, Bloco, ID, Revisão"
-                               name="nome" id="nome" required/>
-                        <a href="/(EventoPesquisar)"><img class="imagem-pesquisar" src="/imagens/lupaPesquisa.png"></a>
-                    </div>
+                    <form method="get">
+                        <input type="hidden" th:value="${admin}"
+                               th:attr="name='admin'" id="admin"/>
+                        <div class="div-1">
+                            <h3 class="tag-0">Pesquisar:</h3>
+                            <input class="input-forms-1" type='text' placeholder="Ex: Nome do Bloco"
+                                   name="nome" id="nome"/>
+                            <input class = "btn-salvar" type = "submit" value="Pesquisar">
+                        </div>
+                    </form>
+                    <form method='post'>
                     <div class="div-2">
                         <table>
                             <tr >
-                                <th class="color-th">Documento</th>
-                                <th class="color-th">Bloco</th>
-                                <th class="color-th">ID</th>
-                                <th class="color-th">Revisão</th>
-                                <th class="color-th2"></th>
+                                <th class="color-th">Nome Bloco</th>
+                                <th class="color-th">Seção</th>
+                                <th class="color-th">N° Bloco</th>
+                                <th class="color-th">Ação</th>
+                                <th class="color-th">Data</th>
                             </tr>
-                            <tr >
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-button"><a href="lep"><input class="btn-vizualizar" type="button" value="Visualizar"></td>
-                            </tr>
-                            <tr >
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-button"><a href="lep"><input class="btn-vizualizar" type="button" value="Visualizar"></td>
-                            </tr>
-                            <tr >
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-color-1">linha</td>
-                                <td class="td-button"><a href="lep"><input class="btn-vizualizar" type="button" value="Visualizar"></td>
+                            <tr th:each="lep : ${lep}">
+                            <td class="td-color-1" th:text="${lep.nomeBloco}"></td>
+                            <td class="td-color-1" th:text="${lep.secao}"></td>
+                            <td class="td-color-1" th:text="${lep.nbloco}"></td>
+                            <td class="td-color-1" th:text="${lep.acao}"></td>
+                            <td class="td-color-1" th:text="${lep.data}"></td>
                             </tr>
                         </table>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </form>
-</div>
+    </div>
 </div>
 <script>
 const inputID = document.getElementById('admin');
