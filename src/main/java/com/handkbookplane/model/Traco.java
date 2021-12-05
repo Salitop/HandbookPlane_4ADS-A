@@ -28,6 +28,8 @@ public class Traco {
     private byte[] PDF;
     private String PDF_string;
     private String dataRel;
+    private String descRel;
+    private String pagRel;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idTraco;
@@ -76,6 +78,22 @@ public class Traco {
 
     public void setPDF_string(String PDF_string) {
         this.PDF_string = PDF_string;
+    }
+
+    public String getDescRel() {
+        return descRel;
+    }
+
+    public void setDescRel(String descRel) {
+        this.descRel = descRel;
+    }
+
+    public String getPagRel() {
+        return pagRel;
+    }
+
+    public void setPagRel(String pagRel) {
+        this.pagRel = pagRel;
     }
 
 }

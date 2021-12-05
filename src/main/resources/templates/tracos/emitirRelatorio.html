@@ -42,13 +42,11 @@
                                 <th class="color-th">Traço</th>
                                 <th class="color-th">Último Relatório</th>
                                 <th class="color-th"></th>
-                                <th class="color-th"></th>
-                                <th class="color-th"></th>
                             </tr>
                             <tr th:each="traco : ${traco}">
                                 <td class="td-color-1" th:text="${traco.nomeTraco}"></td>
                                 <td class="td-color-1" name = "data" th:text="${traco.dataRel}"></td>
-                                <td class="td-button"><a href="relatorioTraco"><input class="btn-vizualizar" type="button" value="Escolher"></a></td>
+                                <td class="td-button"><a th:href="@{/relatorioTraco/{id_traco}(idTraco = ${traco.idTraco})}"><input class="btn-vizualizar" type="button" value="Escolher"></a></td>
                             </tr>
                         </table>
                     </div>
