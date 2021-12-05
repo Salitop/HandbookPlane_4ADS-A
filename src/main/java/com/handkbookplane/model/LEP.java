@@ -27,6 +27,7 @@ public class LEP {
     private String secao;
     private Integer nbloco;
     private String acao;
+    private String data;
 
     /**
      * Gerando campos do Bloco
@@ -73,6 +74,14 @@ public class LEP {
 
     public void setAcao(String acao) {
         this.acao = acao;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
 
