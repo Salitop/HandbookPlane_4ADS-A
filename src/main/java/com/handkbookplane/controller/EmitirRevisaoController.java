@@ -94,11 +94,13 @@ public class EmitirRevisaoController {
         blocoAlterado.setDataRev(dateFormatado);
         modelAndView.addObject("bloco", blocoRepository.save(blocoAlterado));
 
+        //Cadastrando na LEP
         lep.setIdBloco(blocoAlterado.getIdBloco());
         lep.setNbloco(blocoAlterado.getNbloco());
         lep.setNomeBloco(blocoAlterado.getNomeBloco());
+        lep.setSecao(blocoAlterado.getSecao());
+        lep.setData(dateFormatado);
 
-        //Cadastrando na LEP
         if(acao == 1)
         {
             lep.setAcao("* new"); // Adicionar
@@ -115,8 +117,6 @@ public class EmitirRevisaoController {
            }
         }
         modelAndView.addObject("lep", lepRepository.save(lep));
-
-
 
         modelAndView.setViewName("/bloco/revisaoBloco");
 

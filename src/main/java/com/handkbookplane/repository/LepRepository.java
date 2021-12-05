@@ -1,4 +1,5 @@
 package com.handkbookplane.repository;
+import com.handkbookplane.model.Bloco;
 import com.handkbookplane.model.LEP;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -15,6 +16,7 @@ import java.util.List;
  */
 @Repository
 public interface LepRepository extends CrudRepository<LEP, String>
-
 {
+    //Procura Bloco por nome
+    ArrayList<LEP> findByNomeBloco(String nomeBloco);
 }
