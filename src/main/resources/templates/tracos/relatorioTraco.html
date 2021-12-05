@@ -29,16 +29,16 @@
                            th:attr="name='admin'" id="admin"/>
                     <div class="div-1">
                         <h3 class="tag-0">Relatório do Traço:</h3>
-                        <h2>ABC-1234-02-04c06</h2>
+                        <h2 th:text="${traco.nomeTraco}"></h2>
                     </div>
 
                     <div class="div-1">
                         <h3 class="tag-1">Descrição do traço:</h3>
-                        <textarea class="text-area-1"rows="4" cols="50" placeholder="Ex:Traço referente painel do avião"></textarea>
+                        <textarea class="text-area-1"rows="4" cols="50" name="descRel" th:text="${traco.descRel}" placeholder="Ex:Traço referente painel do avião"></textarea>
                     </div>
                     <div class="div-1">
                         <h3 class="tag-2">N° de páginas:</h3>
-                        <textarea class="text-area-2"rows="1" cols="50" placeholder="Ex: 12 páginas"></textarea>
+                        <textarea class="text-area-2"rows="1" cols="50" name="pagRel" th:text="${traco.pagRel}" placeholder="Ex: Páginas 1,4 e 9"></textarea>
 
                     </div>
                     <div>
