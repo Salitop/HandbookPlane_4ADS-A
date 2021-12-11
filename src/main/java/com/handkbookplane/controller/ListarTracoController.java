@@ -9,6 +9,7 @@ import com.handkbookplane.repository.TracoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -93,4 +94,41 @@ public class ListarTracoController {
             return mv;
         }
     }
+
+    @GetMapping(value = "/deletarTracoPDF")
+    public ModelAndView teladeletarTracoPDF(Integer idTraco) {
+        Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
+        idTraco = Usuario.idTracoGlobal;
+        if(idTraco != null)
+        {
+            ModelAndView mv = new ModelAndView("/tracos/deletarTracoPDF");
+
+            Traco traco = tracoRepository.findByIdTraco(idTraco);
+
+            String pdf = Base64.getEncoder().encodeToString(traco.getPDF());
+            traco.setPDF_string(pdf);
+
+            mv.addObject("traco", traco);
+
+            mv.addObject("administrador", administrador);
+            return mv;
+        }
+        else
+        {
+            ModelAndView mv = new ModelAndView("redirect:/menuTraco");
+            mv.addObject("administrador", administrador);
+            return mv;
+        }
+    }
+
+    @PostMapping(value = "/deletarTracoPDF")
+    public ModelAndView eventodeletarTracoPDF(Integer idTraco) {
+        ModelAndView mv = new ModelAndView("/tracos/deletarTracoPDF");
+
+       //Codigo de apagar deletar
+
+        return mv;
+    }
+
+
 }

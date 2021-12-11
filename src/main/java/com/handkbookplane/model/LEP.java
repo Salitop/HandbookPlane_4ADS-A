@@ -23,6 +23,7 @@ import java.util.UUID;
 public class LEP {
 
     private String nomeBloco;
+    private String nomeTraco;
     @GeneratedValue
     private String secao;
     private Integer nbloco;
@@ -51,6 +52,15 @@ public class LEP {
     public void setNomeBloco(String nomeBloco) {
         this.nomeBloco = nomeBloco;
     }
+
+    public String getNomeTraco() {
+        return nomeTraco;
+    }
+
+    public void setNomeTraco(String nomeTraco) {
+        this.nomeTraco = nomeTraco;
+    }
+
 
     public String getSecao() {
         return secao;
