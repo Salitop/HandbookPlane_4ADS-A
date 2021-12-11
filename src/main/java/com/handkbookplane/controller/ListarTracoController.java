@@ -6,12 +6,19 @@ import com.handkbookplane.model.Traco;
 import com.handkbookplane.model.Usuario;
 import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.TracoRepository;
+import org.apache.commons.io.FileUtils;
+import org.apache.pdfbox.multipdf.PDFMergerUtility;
+import org.apache.pdfbox.pdmodel.PDDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -96,9 +103,25 @@ public class ListarTracoController {
     }
 
     @GetMapping(value = "/deletarTracoPDF")
-    public ModelAndView teladeletarTracoPDF(Integer idTraco) {
+    public ModelAndView teladeletarTracoPDF(Integer idTraco) throws IOException {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
-        idTraco = Usuario.idTracoGlobal;
+
+        Traco tracoPDF = tracoRepository.findByIdTraco(idTraco);
+
+        byte[] pdfs = tracoPDF.getPDF();
+
+        File file = new File("filekk");
+
+        FileUtils.writeByteArrayToFile(file, pdfs);
+
+        PDDocument document = PDDocument.load(file);
+
+        Integer no0fpages = document.getNumberOfPages();
+        System.out.println(no0fpages);
+
+        document.removePage(/*paginaqueusuiariofalou*/ 2);
+
+
         if(idTraco != null)
         {
             ModelAndView mv = new ModelAndView("/tracos/deletarTracoPDF");
@@ -122,10 +145,21 @@ public class ListarTracoController {
     }
 
     @PostMapping(value = "/deletarTracoPDF")
-    public ModelAndView eventodeletarTracoPDF(Integer idTraco) {
+    public ModelAndView eventodeletarTracoPDF(Integer idTraco) throws IOException {
+
+        idTraco = Usuario.idTracoGlobal;
+
+        Traco tracoPDF = tracoRepository.findByIdTraco(idTraco);
+
+        byte[] pdf = tracoPDF.getPDF();
         ModelAndView mv = new ModelAndView("/tracos/deletarTracoPDF");
 
-       //Codigo de apagar deletar
+        Path files = Files.write(new File("kk").toPath(), pdf);
+
+        PDDocument document = PDDocument.load((InputStream) files);
+
+        Integer no0fpages = document.getNumberOfPages();
+        System.out.println(no0fpages);
 
         return mv;
     }

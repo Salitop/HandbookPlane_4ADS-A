@@ -9,6 +9,7 @@ import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.BlocoRepository;
 import com.handkbookplane.repository.CodelistRepository;
 import com.handkbookplane.repository.TracoRepository;
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.util.Base64Util;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -121,21 +122,34 @@ public class AdicionarBlocoTracoController {
             }
             else
             {
+                Integer idTraco = Usuario.idTracoGlobal;
+
+                File fileeeee = new File("teste");
+
+                idTraco = Usuario.idTracoGlobal;
+
+                File file1 = new File("file1");
+                Bloco blocoPdf = blocoRepository.findByIdBloco(idBloco);
+                byte[] pdfBloco = blocoPdf.getPDF();
+
+                File file2 = new File("file2");
+                Traco tracoPdf = tracoRepository.findByIdTraco(idTraco);
+                byte[] pdfTraco = tracoPdf.getPDF();
+
+                FileUtils.writeByteArrayToFile(file2, pdfTraco);
+
+                PDFMergerUtility ut = new PDFMergerUtility();
+                ut.addSource(String.valueOf(pdfTraco));
+                ut.addSource(String.valueOf(pdfBloco));
+                ut.setDestinationFileName("teste");
+                ut.mergeDocuments(null);
+
                 //Puxando informações do bloco
                 Bloco blocoPDF = blocoRepository.findByIdBloco(idBloco);
                 Traco tracoPDF = tracoRepository.findByIdTraco(Usuario.idTracoGlobal);
                 PDFMergerUtility pdfFinal = new PDFMergerUtility();
                 String StringPDFt = Base64.getEncoder().encodeToString(tracoPDF.getPDF());
                 String StringPDFb = Base64.getEncoder().encodeToString(blocoPDF.getPDF());
-                //-------------------- ta cagado
-                byte[] pdf1 = doIt(StringPDFt);
-                byte[] pdf2 = doIt(StringPDFb);
-                PDFMergerUtility merger = new PDFMergerUtility();
-                merger.addSource(new ByteArrayInputStream(pdf1));
-                merger.addSource(new ByteArrayInputStream(pdf2));
-           //     merger.mergeDocuments();
-           //     String pdf = Base64.getEncoder().encodeToString(merger); //salva (n ta funcionando pq tem q ser em base 64)
-           //      traco.setPDF();
                 return mv;
             }
         }
