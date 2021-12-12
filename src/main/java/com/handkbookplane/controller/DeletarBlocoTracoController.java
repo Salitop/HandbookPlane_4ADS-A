@@ -9,12 +9,20 @@ import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.BlocoRepository;
 import com.handkbookplane.repository.CodelistRepository;
 import com.handkbookplane.repository.TracoRepository;
+import org.apache.commons.io.FileUtils;
+import org.apache.pdfbox.pdmodel.PDDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -35,88 +43,90 @@ public class DeletarBlocoTracoController {
     @Autowired
     CodelistRepository codelistRepository;
 
-    /**
-     * Método responsável por dar um get na tela menu Traço
-     * @return ModelAndView
-     */
-    @GetMapping(value = "/deletarBlocoTraco")
-    public ModelAndView teladeletarBlocoTraco(String name) {
+    @GetMapping(value = "/deletarTracoPDF")
+    public ModelAndView teladeletarTracoPDF(Integer idTraco) throws IOException {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
+        idTraco = Usuario.idTracoGlobal;
 
-        ModelAndView mv = new ModelAndView("/tracos/deletarBlocoTraco");
+        if(idTraco != null)
+        {
+            //Carregar PDF
+            ModelAndView mv = new ModelAndView("/tracos/deletarTracoPDF");
+            Traco traco = tracoRepository.findByIdTraco(idTraco);
 
-        if (name != null) {
+            String pdf = Base64.getEncoder().encodeToString(traco.getPDF());
+            traco.setPDF_string(pdf);
 
-            ArrayList<Bloco> bloco = blocoRepository.findByNomeBloco(name);
+            mv.addObject("traco", traco);
 
-            if (bloco.size() != 0) {
+            mv.addObject("administrador", administrador);
 
-                List<Bloco> blocosTotais = new ArrayList<>();
+            //Exibir número de páginas
+            Traco tracoPDF = tracoRepository.findByIdTraco(idTraco);
 
-                for (Bloco blocos : bloco) {
+            byte[] pdfs = tracoPDF.getPDF();
 
-                    String pdf = Base64.getEncoder().encodeToString(blocos.getPDF());
-                    blocos.setPDF_string(pdf);
-                    blocosTotais.add(blocos);
-                }
+            File file = new File("pdfs");
 
-                mv.addObject("bloco", blocosTotais);
+            FileUtils.writeByteArrayToFile(file, pdfs);
 
-                mv.addObject("administrador", administrador);
+            PDDocument document = PDDocument.load(file);
 
-                return mv;
+            Integer numpag = document.getNumberOfPages();
+
+            System.out.println(numpag);
+
+
+            List<Integer> pagTotais = new ArrayList<>();
+
+            //Por começar a contar desde 0, este for precisa somar +1 a fim de exibição para o usuário
+            for (int i = 1; i <= numpag; i++)
+            {
+                pagTotais.add(i);
+
+                System.out.println(i);
             }
+            mv.addObject("numpag", pagTotais);
 
-            Iterable<Bloco> blocos = blocoRepository.findAll();
-
-            mv.addObject("bloco", blocos);
-
+            return mv;
+        }
+        else
+        {
+            ModelAndView mv = new ModelAndView("redirect:/menuTraco");
             mv.addObject("administrador", administrador);
             return mv;
         }
 
-        Iterable<Bloco> bloco = blocoRepository.findAll();
-
-        List<Bloco> blocosTotais = new ArrayList<>();
-
-        for (Bloco blocos : bloco) {
-
-            String pdf = Base64.getEncoder().encodeToString(blocos.getPDF());
-            blocos.setPDF_string(pdf);
-            blocosTotais.add(blocos);
-        }
-
-        mv.addObject("bloco", blocosTotais);
-
-        mv.addObject("administrador", administrador);
-        return mv;
     }
 
-    //Deverá cadastrar tanto Traço quanto Codelist
-    @PostMapping(value = "/deletarBlocoTraco")
-    public Object deletarBlocoTraco(Traco traco, Codelist codelist, Integer idBloco) {
-        if(idBloco != null) {
-            ModelAndView mv = new ModelAndView("redirect:/menuTraco");
-            //Puxando informações do bloco
-            Bloco bloco = blocoRepository.findByIdBloco(idBloco);
-            //Salvando PDF do bloco no Traço
-            byte[] pdf = bloco.getPDF();
-            traco.setPDF(pdf);
-            //Cadastrando Traço
-            mv.addObject("traco", tracoRepository.save(traco));
-            //Cadastrando no codelist
-            codelist.setCode(bloco.getCode());
-            codelist.setApelidoBloco(bloco.getNomeBloco());
-            codelist.setNbloco(bloco.getNbloco());
-            codelist.setSecao(bloco.getSecao());
-            codelist.setSubsecao(bloco.getSubsecao());
+    @PostMapping(value = "/deletarTracoPDF")
+    public ModelAndView eventodeletarTracoPDF(HttpSession session, HttpServletRequest request, Integer idTraco, @RequestParam("select") Integer pagina) throws IOException {
+        Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
+        FileOutputStream fos = new FileOutputStream("pdf");
 
-            mv.addObject("codelist",codelistRepository.save(codelist));
-            return mv;
-        }
-        else{
-            ModelAndView mv = new ModelAndView("redirect:/menuTraco");
-            return mv;
-        }
+        idTraco = Usuario.idTracoGlobal;
+        Traco tracoPDF = tracoRepository.findByIdTraco(idTraco);
+        ModelAndView mv = new ModelAndView("/menu/menuTraco");
+        mv.addObject("administrador", administrador);
+
+        byte[] pdf = tracoPDF.getPDF();
+        fos.write(pdf);
+        File pdfF = new File("pdf");
+        PDDocument document = PDDocument.load(pdfF);
+
+        Integer no0fpages = document.getNumberOfPages();
+        System.out.println(no0fpages);
+        //Subtração realizada para encontrar a página correta
+        document.removePage(pagina - 1);
+
+        document.save("pdf");
+
+        document.close();
+        byte[] pdfFinal = Files.readAllBytes(pdfF.toPath());
+
+        tracoPDF.setPDF(pdfFinal);
+        tracoPDF.setIdTraco(Usuario.idTracoGlobal);
+        tracoRepository.save(tracoPDF);
+        return mv;
     }
 }

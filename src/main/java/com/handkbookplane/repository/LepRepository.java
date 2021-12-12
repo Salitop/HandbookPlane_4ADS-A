@@ -19,4 +19,6 @@ public interface LepRepository extends CrudRepository<LEP, String>
 {
     //Procura Bloco por nome
     ArrayList<LEP> findByNomeBloco(String nomeBloco);
+
+    LEP findAllByNomeBloco(String nomeBloco);
 }
