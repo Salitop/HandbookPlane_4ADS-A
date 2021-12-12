@@ -44,7 +44,7 @@
                             <tbody>
 
                             <tr th:each="bloco : ${bloco}">
-                                <td class="td-button"><a th:href="@{/visualizarBlocoPDF/{id_bloco}(idBloco = ${bloco.idBloco})}"><input class="btn-vizualizar" type="button" value="Adicionar"></a></td>
+                                <td class="td-button"><a th:href="@{/adicionarBlocoTraco/{id_bloco}(idBloco = ${bloco.idBloco})}"><input class="btn-vizualizar" type="button" value="Adicionar"></a></td>
                                 <td name="nomeBloco" class="td-color-1" th:text="${bloco.nomeBloco}"></td>
                                 <td name="code" class="td-color-1" th:text="${bloco.code}"></td>
                                 <td class="td-button"><a th:href="@{/visualizarBlocoPDF/{id_bloco}(idBloco = ${bloco.idBloco})}"><input class="btn-vizualizar" type="button" value="Visualizar"></a></td>

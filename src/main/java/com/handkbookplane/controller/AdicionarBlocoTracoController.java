@@ -9,12 +9,19 @@ import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.BlocoRepository;
 import com.handkbookplane.repository.CodelistRepository;
 import com.handkbookplane.repository.TracoRepository;
+import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.util.Base64Util;
+import org.apache.pdfbox.pdmodel.PDDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.apache.pdfbox.multipdf.PDFMergerUtility;
 
+import java.io.*;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -40,7 +47,7 @@ public class AdicionarBlocoTracoController {
      * @return ModelAndView
      */
     @GetMapping(value = "/adicionarBlocoTraco")
-    public ModelAndView teladeletarBlocoTraco(String name) {
+    public ModelAndView telaAddBlocoTraco(String name) {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
 
         ModelAndView mv = new ModelAndView("/tracos/adicionarBlocoTraco");
@@ -92,31 +99,56 @@ public class AdicionarBlocoTracoController {
         return mv;
     }
 
-    //Deverá cadastrar tanto Traço quanto Codelist
-    @PostMapping(value = "/adicionarBlocoTraco")
-    public Object deletarBlocoTraco(Traco traco, Codelist codelist, Integer idBloco) {
-        if(idBloco != null) {
-            ModelAndView mv = new ModelAndView("redirect:/menuTraco");
-            //Puxando informações do bloco
-            Bloco bloco = blocoRepository.findByIdBloco(idBloco);
-            //Salvando PDF do bloco no Traço
-            byte[] pdf = bloco.getPDF();
-            traco.setPDF(pdf);
-            //Cadastrando Traço
-            mv.addObject("traco", tracoRepository.save(traco));
-            //Cadastrando no codelist
-            codelist.setCode(bloco.getCode());
-            codelist.setApelidoBloco(bloco.getNomeBloco());
-            codelist.setNbloco(bloco.getNbloco());
-            codelist.setSecao(bloco.getSecao());
-            codelist.setSubsecao(bloco.getSubsecao());
+    @RequestMapping(value = "/adicionarBlocoTraco/{id_bloco}")
+    public ModelAndView AdicionarBlocoTraco(Traco traco, Codelist codelist, Integer idBloco, Integer val) throws IOException {
+        Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
 
-            mv.addObject("codelist",codelistRepository.save(codelist));
-            return mv;
-        }
+        //Gerando arquivos para poder realizar a adição do bloco no traço
+        FileOutputStream fosT = new FileOutputStream("pdfT");
+        FileOutputStream fosB = new FileOutputStream("pdfB");
+
+        if(idBloco != null) {
+            ModelAndView mv = new ModelAndView("/menu/menuTraco");
+                Integer idTraco = Usuario.idTracoGlobal;
+
+            //Salvando pdf do Traço em uma File
+            Traco tracoPdf = tracoRepository.findByIdTraco(idTraco);
+            byte[] pdfT = tracoPdf.getPDF();
+            fosT.write(pdfT);
+            File pdfFT = new File("pdfT");
+            PDDocument docTraco = PDDocument.load(pdfFT);
+
+            //Salvando pdf do bloco em uma File
+            Bloco blocoPdf = blocoRepository.findByIdBloco(idBloco);
+            byte[] pdfB = blocoPdf.getPDF();
+            fosB.write(pdfB);
+            File pdfFB = new File("pdfB");
+            PDDocument pdfBlocoDoc = PDDocument.load(pdfFB);
+
+            //Contando as paginas que o arquivo possui e adiciona as páginas do Bloco no Traço
+            Integer numpag = pdfBlocoDoc.getNumberOfPages();
+                List<Integer> pagTotais = new ArrayList<>();
+               for (int i = 0; i < numpag; i++)
+               {
+                 System.out.println(i);
+                 docTraco.addPage(pdfBlocoDoc.getPage(i));
+                 docTraco.save("pdfT");
+               }
+             //Salvando o arquivo e salvando no banco
+            docTraco.close();
+               byte[] pdfFinal = Files.readAllBytes(pdfFT.toPath());
+                tracoPdf.setPDF(pdfFinal);
+                tracoPdf.setIdTraco(Usuario.idTracoGlobal);
+                tracoRepository.save(tracoPdf);
+                mv.addObject("administrador", administrador);
+                return mv;
+            }
+
         else{
             ModelAndView mv = new ModelAndView("redirect:/menuTraco");
+            mv.addObject("administrador", administrador);
             return mv;
         }
     }
+
 }

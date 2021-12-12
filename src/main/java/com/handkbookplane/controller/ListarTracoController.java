@@ -1,16 +1,23 @@
 package com.handkbookplane.controller;
 
 import com.handkbookplane.model.Administrador;
-import com.handkbookplane.model.Bloco;
 import com.handkbookplane.model.Traco;
 import com.handkbookplane.model.Usuario;
 import com.handkbookplane.repository.AdministradorRepository;
 import com.handkbookplane.repository.TracoRepository;
+import org.apache.commons.io.FileUtils;
+import org.apache.pdfbox.pdmodel.PDDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -93,4 +100,8 @@ public class ListarTracoController {
             return mv;
         }
     }
+
+
+
+
 }
