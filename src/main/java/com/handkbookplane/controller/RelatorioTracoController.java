@@ -38,7 +38,7 @@ public class RelatorioTracoController {
     @GetMapping(value = "/relatorioTraco/{idTraco}")
     public ModelAndView telarevisaoBloco(Integer idTraco) {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
-
+        Usuario.idTracoGlobal = idTraco;
         ModelAndView mv = new ModelAndView("/tracos/relatorioTraco");
 
         Traco traco = tracoRepository.findByIdTraco(idTraco);
@@ -52,7 +52,8 @@ public class RelatorioTracoController {
     @PostMapping(value = "/relatorioTraco/{idTraco}")
     public ModelAndView CadrelatorioTraco(Integer idTraco, Traco traco, String descRel, String pagRel) {
         Administrador administrador = administradorRepository.findByIdAdmin(Usuario.IdUsu);
-
+        //Registrando IdTraco para usar no adicionar bloco para o traco
+        Usuario.idTracoGlobal = idTraco;
         //Cadastrando a revisão
         ModelAndView modelAndView = new ModelAndView();
         Traco tracoAlterado = tracoRepository.findByIdTraco(idTraco);
